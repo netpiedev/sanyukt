@@ -1,4 +1,5 @@
 import { BuildingChangeSection } from "@/components/home/building-change-section";
+import { DonationImpactSection } from "@/components/home/donation-impact-section";
 import { HomeHero } from "@/components/home/home-hero";
 import { WhatWeDoSection } from "@/components/home/what-we-do-section";
 import { SiteHeader } from "@/components/site-header";
@@ -10,6 +11,7 @@ export default function Home() {
       <HomeHero />
       <BuildingChangeSection />
       <WhatWeDoSection />
+      <DonationImpactSection />
     </main>
   );
 }
