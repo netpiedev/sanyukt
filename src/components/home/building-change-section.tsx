@@ -1,12 +1,19 @@
-import { ArrowUpRight, Image as ImageIcon } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { SupportCauseButton } from "@/components/home/support-cause-button";
 
 function IllustrationPlaceholder() {
   return (
-    <div className="mx-auto flex h-[20rem] w-full max-w-[26rem] items-center justify-center rounded-[2.2rem] border border-[#dfe6ee] bg-[linear-gradient(145deg,#f4f6f8_0%,#dde3e9_100%)] sm:h-[24rem] sm:max-w-[29rem] lg:h-[23rem] lg:max-w-[27.5rem]">
-      <div className="flex flex-col items-center text-[#99a5b2]">
-        <ImageIcon aria-hidden="true" className="h-12 w-12" strokeWidth={1.8} />
+    <div className="mx-auto h-[20rem] w-full max-w-[26rem] overflow-hidden bg-[#eef2f6] sm:h-[24rem] sm:max-w-[29rem] lg:h-[23rem] lg:max-w-[27.5rem]">
+      <div className="relative h-full w-full">
+        <Image
+          src="/images/building-change.png"
+          alt="Building change together"
+          fill
+          sizes="(max-width: 1024px) 100vw, 440px"
+          className="object-cover"
+        />
       </div>
     </div>
   );

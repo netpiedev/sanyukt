@@ -1,18 +1,16 @@
-import {
-  ArrowUpRight,
-  ChevronLeft,
-  ChevronRight,
-  Image as ImageIcon,
-} from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 function ImagePlaceholder() {
   return (
-    <div className="flex h-[21rem] w-full items-center justify-center rounded-[2rem] border border-[#dfe6ee] bg-[#d8dde3] md:h-[24rem]">
-      <ImageIcon
-        aria-hidden="true"
-        className="h-14 w-14 text-[#97a4b1]"
-        strokeWidth={1.8}
+    <div className="relative h-[21rem] w-full overflow-hidden rounded-[2rem] border border-[#dfe6ee] bg-[#d8dde3] md:h-[24rem]">
+      <Image
+        src="/images/chukkala-pavani.png"
+        alt="Chukkala Pavani"
+        fill
+        sizes="(max-width: 768px) 100vw, 50vw"
+        className="object-cover"
       />
     </div>
   );

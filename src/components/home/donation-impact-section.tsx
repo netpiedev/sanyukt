@@ -1,12 +1,7 @@
 "use client";
 
-import {
-  ChevronLeft,
-  ChevronRight,
-  Heart,
-  Image as ImageIcon,
-  Share2,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, Heart, Share2 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
@@ -44,28 +39,28 @@ const donationCards = [
     progress: 31,
   },
   {
-    title: "Support community kitchens and keep hope warm this season",
-    raised: "₹62,180",
-    goal: "₹2,00,000",
-    supporters: "71240 Supporters",
-    daysLeft: "289 days left",
-    progress: 38,
+    title: "Be the Chariot's guiding light! Donate to Rath Yatra's Eve",
+    raised: "₹45,769",
+    goal: "₹1,50,000",
+    supporters: "65189 Supporters",
+    daysLeft: "348 days left",
+    progress: 31,
   },
   {
-    title: "Help us fund safe learning spaces for young girls",
-    raised: "₹84,300",
-    goal: "₹2,40,000",
-    supporters: "80412 Supporters",
-    daysLeft: "301 days left",
-    progress: 46,
+    title: "Be the Chariot's guiding light! Donate to Rath Yatra's Eve",
+    raised: "₹45,769",
+    goal: "₹1,50,000",
+    supporters: "65189 Supporters",
+    daysLeft: "348 days left",
+    progress: 31,
   },
   {
-    title: "Stand with village health drives and awareness camps",
-    raised: "₹53,920",
-    goal: "₹1,80,000",
-    supporters: "59832 Supporters",
-    daysLeft: "267 days left",
-    progress: 34,
+    title: "Be the Chariot's guiding light! Donate to Rath Yatra's Eve",
+    raised: "₹45,769",
+    goal: "₹1,50,000",
+    supporters: "65189 Supporters",
+    daysLeft: "348 days left",
+    progress: 31,
   },
 ];
 
@@ -78,12 +73,13 @@ function DonationCard({
 }) {
   return (
     <article className="overflow-hidden rounded-[2rem] border border-[#eef2f7] bg-white">
-      <div className="relative flex h-[16rem] items-center justify-center bg-[#d8dde3] md:h-[15.8rem]">
-        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.34),transparent_34%),linear-gradient(315deg,rgba(255,255,255,0.18),transparent_32%)]" />
-        <ImageIcon
-          aria-hidden="true"
-          className="relative z-10 h-14 w-14 text-[#97a4b1]"
-          strokeWidth={1.8}
+      <div className="relative h-[16rem] overflow-hidden bg-[#d8dde3] md:h-[15.8rem]">
+        <Image
+          src="/images/jagannath.png"
+          alt="Donation campaign"
+          fill
+          sizes="(max-width: 768px) 100vw, 28vw"
+          className="object-cover"
         />
         {mobile ? (
           <button

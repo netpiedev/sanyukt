@@ -1,22 +1,26 @@
 "use client";
 
 import { ChevronLeft, ChevronRight, Image as ImageIcon } from "lucide-react";
+import Image from "next/image";
 import { useMemo, useState } from "react";
 
 const testimonials = [
   {
     name: "Sradha Panigrahi",
     title: "Ollywood Actress",
+    image: "/images/sradha.png",
     body: "The passion of the Sanyukt team to drive meaningful change in society is truly inspiring. From empowering lives to addressing critical societal issues, their commitment stands out. It's rare to see such a level of devotion and teamwork working toward a better future.",
   },
   {
     name: "Soumya Suman",
     title: "Assistant Manager - Marketing",
+    image: "/images/soumya.png",
     body: "Partnering with Sanyukt Organisation was a remarkable experience. Their professionalism, dedication, and passion were evident throughout the initiative. The collaboration ensured meaningful outreach and created a lasting positive impression on everyone involved.",
   },
   {
     name: "Ananya Das",
     title: "Community Volunteer",
+    image: null,
     body: "What makes Sanyukt special is the sincerity behind every effort. The team builds trust, involves people with empathy, and consistently turns good intentions into measurable social impact. It feels meaningful to contribute alongside them.",
   },
 ];
@@ -24,12 +28,22 @@ const testimonials = [
 function TestimonialCard({ item }: { item: (typeof testimonials)[number] }) {
   return (
     <article className="rounded-[2rem] bg-white p-4">
-      <div className="flex h-[13.5rem] items-center justify-center rounded-[1.65rem] bg-[#d8dde3]">
-        <ImageIcon
-          aria-hidden="true"
-          className="h-14 w-14 text-[#97a4b1]"
-          strokeWidth={1.8}
-        />
+      <div className="relative flex h-[13.5rem] items-center justify-center overflow-hidden rounded-[1.65rem] bg-[#d8dde3]">
+        {item.image ? (
+          <Image
+            src={item.image}
+            alt={item.name}
+            fill
+            sizes="(max-width: 1024px) 100vw, 30vw"
+            className="object-cover"
+          />
+        ) : (
+          <ImageIcon
+            aria-hidden="true"
+            className="h-14 w-14 text-[#97a4b1]"
+            strokeWidth={1.8}
+          />
+        )}
       </div>
 
       <div className="mt-7">
