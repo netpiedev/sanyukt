@@ -3,6 +3,7 @@ import { DonationImpactSection } from "@/components/home/donation-impact-section
 import { HomeHero } from "@/components/home/home-hero";
 import { StoriesUpdateSection } from "@/components/home/stories-update-section";
 import { WhatWeDoSection } from "@/components/home/what-we-do-section";
+import { WhySanyuktSection } from "@/components/home/why-sanyukt-section";
 import { SiteHeader } from "@/components/site-header";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <WhatWeDoSection />
       <DonationImpactSection />
       <StoriesUpdateSection />
+      <WhySanyuktSection />
     </main>
   );
 }
