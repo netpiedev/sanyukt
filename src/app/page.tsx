@@ -1,6 +1,7 @@
 import { BuildingChangeSection } from "@/components/home/building-change-section";
 import { DonationImpactSection } from "@/components/home/donation-impact-section";
 import { HomeHero } from "@/components/home/home-hero";
+import { MediaPartnersSection } from "@/components/home/media-partners-section";
 import { StoriesUpdateSection } from "@/components/home/stories-update-section";
 import { WhatWeDoSection } from "@/components/home/what-we-do-section";
 import { WhySanyuktSection } from "@/components/home/why-sanyukt-section";
@@ -16,6 +17,7 @@ export default function Home() {
       <DonationImpactSection />
       <StoriesUpdateSection />
       <WhySanyuktSection />
+      <MediaPartnersSection />
     </main>
   );
 }
