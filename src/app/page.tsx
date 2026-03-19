@@ -1,5 +1,6 @@
 import { BuildingChangeSection } from "@/components/home/building-change-section";
 import { HomeHero } from "@/components/home/home-hero";
+import { WhatWeDoSection } from "@/components/home/what-we-do-section";
 import { SiteHeader } from "@/components/site-header";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <SiteHeader />
       <HomeHero />
       <BuildingChangeSection />
+      <WhatWeDoSection />
     </main>
   );
 }
