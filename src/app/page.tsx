@@ -1,3 +1,4 @@
+import { FaqSection } from "@/components/faq-section";
 import { BuildingChangeSection } from "@/components/home/building-change-section";
 import { DonationImpactSection } from "@/components/home/donation-impact-section";
 import { HomeHero } from "@/components/home/home-hero";
@@ -7,6 +8,7 @@ import { SupportersTestimonialsSection } from "@/components/home/supporters-test
 import { WhatWeDoSection } from "@/components/home/what-we-do-section";
 import { WhySanyuktSection } from "@/components/home/why-sanyukt-section";
 import { SiteHeader } from "@/components/site-header";
+import { faqs } from "@/data/faqs";
 
 export default function Home() {
   return (
@@ -20,6 +22,7 @@ export default function Home() {
       <WhySanyuktSection />
       <MediaPartnersSection />
       <SupportersTestimonialsSection />
+      <FaqSection entries={faqs} title="Frequently asked Questions" />
     </main>
   );
 }
