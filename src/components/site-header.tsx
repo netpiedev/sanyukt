@@ -227,7 +227,7 @@ export function SiteHeader() {
                   href={item.href}
                   className={`inline-flex items-center justify-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)] ${
                     item.variant === "solid"
-                      ? "border-[var(--color-button)] bg-[var(--color-button)] text-white shadow-[0_12px_24px_rgba(69,193,76,0.28)] hover:-translate-y-0.5 hover:brightness-105"
+                      ? "border-[var(--color-button)] bg-[var(--color-button)] text-white hover:-translate-y-0.5 hover:brightness-105"
                       : item.variant === "outline"
                         ? "border-[var(--color-border-strong)] bg-white text-[var(--color-text)] hover:border-[var(--color-button)] hover:text-[var(--color-button)]"
                         : "border-transparent bg-transparent px-2 text-[var(--color-muted)] hover:text-[var(--color-text)]"
@@ -256,7 +256,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-3 min-[1100px]:hidden">
             <Link
               href="#"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-button)] px-5 py-3 text-sm font-bold text-white shadow-[0_12px_24px_rgba(69,193,76,0.22)] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--color-button)] px-5 py-3 text-sm font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
             >
               Donate now
             </Link>

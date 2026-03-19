@@ -25,7 +25,7 @@ const impactStats = [
 
 export function HeroImagePlaceholder() {
   return (
-    <div className="overflow-hidden rounded-[2rem] border border-[#dfe6ee] bg-white shadow-[0_18px_35px_rgba(32,54,84,0.05)] md:rounded-[2.6rem]">
+    <div className="overflow-hidden rounded-[2rem] border border-[#dfe6ee] bg-white md:rounded-[2.6rem]">
       <div className="relative flex h-[18rem] items-center justify-center overflow-hidden bg-[#d8dde3] sm:h-[22rem] md:h-[32rem]">
         <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.36),transparent_34%),linear-gradient(315deg,rgba(255,255,255,0.24),transparent_32%)]" />
         <ImageIcon

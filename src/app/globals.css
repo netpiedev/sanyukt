@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fcfdf9;
+  --background: #ffffff;
   --foreground: #1f2f23;
-  --color-page: #fcfdf9;
-  --color-surface: #fcfdf9;
+  --color-page: #ffffff;
+  --color-surface: #ffffff;
   --color-text: #243328;
   --color-muted: #687a6a;
   --color-button: #45c14c;

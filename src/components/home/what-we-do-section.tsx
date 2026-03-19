@@ -108,7 +108,7 @@ export function WhatWeDoSection() {
   }, []);
 
   return (
-    <section className="mx-auto w-full max-w-[1320px] px-6 py-18 sm:px-8 md:py-20">
+    <section className="mx-auto w-full max-w-[1188px] px-6 py-18 sm:px-8 md:py-20">
       <div className="hidden md:block">
         <h2 className="text-center text-[2rem] font-semibold tracking-[-0.04em] text-[#1a2434]">
           What we do?
