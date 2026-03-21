@@ -19,7 +19,7 @@ export type ActionItem = {
 export const primaryNav: NavItem[] = [
   {
     label: "Home",
-    href: "#",
+    href: "/",
   },
   {
     label: "About us",
@@ -78,7 +78,7 @@ export const actionNav: ActionItem[] = [
   },
   {
     label: "Support us",
-    href: "#",
+    href: "/donate",
     variant: "solid",
     icon: "heart",
   },

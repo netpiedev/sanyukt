@@ -2,7 +2,7 @@ import { Heart } from "lucide-react";
 import Link from "next/link";
 
 export function SupportCauseButton({
-  href = "#",
+  href = "/donate",
   className = "",
 }: {
   href?: string;

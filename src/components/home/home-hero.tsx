@@ -24,7 +24,7 @@ export function HomeHero() {
         <div className="mt-7 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
           <SupportCauseButton className="min-w-[13.5rem] px-3 py-2.5 text-[0.95rem] font-semibold" />
           <Link
-            href="#"
+            href="/donate"
             className="inline-flex items-center justify-center gap-2 px-3 py-2 text-[0.95rem] font-medium text-[#1f2937] transition-colors duration-200 hover:text-[var(--color-button)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
           >
             <span>Learn more</span>

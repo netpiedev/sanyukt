@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function BrandMark({
   className = "",
-  href = "#",
+  href = "/",
 }: {
   className?: string;
   href?: string;

@@ -114,7 +114,7 @@ function DonationCard({
         </div>
 
         <Link
-          href="#"
+          href="/donate"
           className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#d8e1ec] px-6 py-2.75 text-[0.94rem] font-medium text-[#121c2c] transition-colors duration-200 hover:border-[var(--color-button)] hover:text-[var(--color-button)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
         >
           <span>Support a Cause</span>

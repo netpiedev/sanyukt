@@ -228,7 +228,7 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-3 min-[1100px]:hidden">
             <Link
-              href="#"
+              href="/donate"
               className="inline-flex items-center justify-center rounded-full bg-[var(--color-button)] px-5 py-3 text-sm font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
             >
               Donate now
