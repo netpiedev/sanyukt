@@ -66,7 +66,7 @@ function DropdownCard({
   }
 
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <button
         type="button"
         aria-expanded={isOpen}
@@ -92,7 +92,7 @@ function DropdownCard({
         id={menuId}
         role="menu"
         aria-label={item.label}
-        className={`absolute left-0 top-[calc(100%+1.2rem)] w-[min(19rem,30vw)] origin-top-left rounded-[1.1rem] border border-black/5 bg-[var(--color-surface)] p-2 shadow-[0_22px_45px_rgba(16,44,25,0.18)] transition-all duration-200 ${
+        className={`absolute left-0 top-[calc(100%+1.2rem)] z-50 w-[min(19rem,30vw)] origin-top-left rounded-[1.1rem] border border-black/5 bg-[var(--color-surface)] p-2 shadow-[0_22px_45px_rgba(16,44,25,0.18)] transition-all duration-200 ${
           isOpen
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-2 opacity-0"
@@ -172,7 +172,7 @@ export function SiteHeader() {
   };
 
   return (
-    <header ref={headerRef} className="bg-[var(--color-surface)]">
+    <header ref={headerRef} className="relative z-50 bg-[var(--color-surface)]">
       <div className="mx-auto max-w-[1920px] px-6 py-7 sm:px-8 lg:px-10">
         <nav
           aria-label="Primary navigation"
