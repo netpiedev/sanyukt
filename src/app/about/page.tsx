@@ -1,5 +1,6 @@
 import { AboutHeroSection } from "@/components/about/about-hero-section";
 import { AboutValuesSection } from "@/components/about/about-values-section";
+import { AboutTimelineSection } from "@/components/about/about-timeline-section";
 import { faqs } from "@/data/faqs";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -14,6 +15,7 @@ export default function AboutPage() {
       <AboutHeroSection />
       <WatchVideoSection />
       <AboutValuesSection />
+      <AboutTimelineSection />
       <MediaPartnersSection />
       <FaqSection entries={faqs} title="Frequently asked Questions" />
       <SiteFooter />
