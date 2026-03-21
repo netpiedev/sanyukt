@@ -12,7 +12,7 @@ const aboutParagraphs = [
   "Today, Sanyukt stands as a symbol of youth power in Odisha, continuing to grow and expand its footprint. Every initiative we undertake, whether in education, healthcare, sustainability, or community empowerment, echoes our core belief: when youth unite with purpose, they become the strongest force of change.",
 ];
 
-export function AboutHeroSection() {
+export function HeroSection() {
   const [expanded, setExpanded] = useState(false);
 
   return (

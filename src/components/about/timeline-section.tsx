@@ -48,7 +48,7 @@ const timelineData = [
   }
 ];
 
-export function AboutTimelineSection() {
+export function TimelineSection() {
   return (
     <section className="w-full bg-[#f8fbfd] py-16 md:py-24">
       <div className="mx-auto w-full max-w-[1072px] px-6 lg:px-8">

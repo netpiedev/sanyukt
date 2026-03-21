@@ -18,7 +18,7 @@ const values = [
   },
 ];
 
-export function AboutValuesSection() {
+export function ValuesSection() {
   return (
     <section className="w-full bg-[#f8fbfd] py-16 md:py-24">
       <div className="mx-auto w-full max-w-[1240px] px-6 md:px-8">

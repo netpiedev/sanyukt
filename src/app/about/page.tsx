@@ -1,6 +1,7 @@
-import { AboutHeroSection } from "@/components/about/about-hero-section";
-import { AboutValuesSection } from "@/components/about/about-values-section";
-import { AboutTimelineSection } from "@/components/about/about-timeline-section";
+import { HeroSection } from "@/components/about/hero-section";
+import { ValuesSection } from "@/components/about/values-section";
+import { TimelineSection } from "@/components/about/timeline-section";
+import { FounderSection } from "@/components/about/founder-section";
 import { faqs } from "@/data/faqs";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -12,10 +13,11 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[var(--color-surface)] text-[var(--color-text)]">
       <SiteHeader />
-      <AboutHeroSection />
+      <HeroSection />
+      <FounderSection />
       <WatchVideoSection />
-      <AboutValuesSection />
-      <AboutTimelineSection />
+      <ValuesSection />
+      <TimelineSection />
       <MediaPartnersSection />
       <FaqSection entries={faqs} title="Frequently asked Questions" />
       <SiteFooter />
