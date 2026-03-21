@@ -8,7 +8,7 @@ export function DonateHero() {
   const [amount, setAmount] = useState<string>("");
 
   return (
-    <section className="relative z-0 mx-auto w-full max-w-[1152px] px-6 py-12 md:px-8 md:py-16 lg:py-20 lg:px-12">
+    <section className="relative z-0 mx-auto w-full max-w-[1152px] px-6 py-12 md:px-8 md:py-16 lg:py-28 lg:px-12">
       <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16 items-stretch">
         {/* Left Content - Images */}
         <div className="flex w-full flex-col gap-8 sm:gap-10 lg:h-full">

@@ -1,4 +1,5 @@
 import { DonateHero } from "@/components/donate/donate-hero";
+import { WatchVideoSection } from "@/components/donate/watch-video-section";
 import { FaqSection } from "@/components/faq-section";
 import { MediaPartnersSection } from "@/components/home/media-partners-section";
 import { StoriesUpdateSection } from "@/components/home/stories-update-section";
@@ -13,6 +14,7 @@ export default function DonatePage() {
     <main className="min-h-screen bg-[var(--color-surface)] text-[var(--color-text)]">
       <SiteHeader />
       <DonateHero />
+      <WatchVideoSection />
       <StoriesUpdateSection />
       <WhySanyuktSection />
       <MediaPartnersSection />
