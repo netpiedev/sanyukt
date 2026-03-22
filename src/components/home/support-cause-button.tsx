@@ -11,7 +11,7 @@ export function SupportCauseButton({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-button)] text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)] ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full bg-[#39B54A] text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#39B54A] ${className}`}
     >
       <span>Support a Cause</span>
       <Heart
