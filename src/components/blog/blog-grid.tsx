@@ -54,7 +54,7 @@ export function BlogGrid() {
           {blogs.map((blog, index) => (
             <div
               key={index}
-              className="flex w-full max-w-[350px] flex-col overflow-hidden rounded-[1.2rem] bg-white p-4 shadow-[0_4px_20px_rgb(0,0,0,0.03)]"
+              className="flex w-full max-w-[350px] flex-col overflow-hidden rounded-[1.2rem] bg-white p-4"
             >
               <div className="relative aspect-16/10 w-full overflow-hidden rounded-[0.8rem]">
                 <Image
