@@ -77,7 +77,7 @@ export function BlogGrid() {
                 </p>
                 <div className="mt-auto pt-2">
                   <Link
-                    href="#"
+                    href="/blog/desc"
                     className="text-[0.85rem] font-semibold text-[#333840] transition-colors hover:text-[#39B54A]"
                   >
                     Read more
