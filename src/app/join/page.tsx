@@ -6,6 +6,8 @@ import { SiteHeader } from "@/components/site-header";
 import { faqs } from "@/data/faqs";
 import { HeroSection } from "@/components/join/hero-section";
 import { MembershipSection } from "@/components/join/membership-section";
+import { MembershipFormSection } from "@/components/join/membership-form-section";
+import { VolunteerSection } from "@/components/join/volunteer-section";
 
 export default function JoinPage() {
   return (
@@ -13,6 +15,8 @@ export default function JoinPage() {
       <SiteHeader />
       <HeroSection />
       <MembershipSection />
+      <MembershipFormSection />
+      <VolunteerSection />
       <MediaPartnersSection />
       <SupportersTestimonialsSection />
       <FaqSection entries={faqs} title="Frequently asked Questions" />
