@@ -1,34 +1,32 @@
 "use client";
 
-import type { LucideIcon } from "lucide-react";
-import { BadgeInfo, Newspaper, Radio, Rss, Tv, Waves } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
 type Partner = {
   name: string;
-  icon: LucideIcon;
-  accent: string;
+  image: string;
 };
 
 const partners: Partner[] = [
-  { name: "MBC TV", icon: Tv, accent: "text-[#ef4444]" },
-  { name: "The Sakala", icon: Newspaper, accent: "text-[#111827]" },
-  { name: "The Samaja", icon: Radio, accent: "text-[#312e81]" },
-  { name: "Sambad English", icon: Waves, accent: "text-[#111827]" },
-  { name: "Kanak News", icon: Rss, accent: "text-[#0f766e]" },
-  { name: "Sambad", icon: BadgeInfo, accent: "text-[#111827]" },
+  { name: "MBC TV", image: "/images/media/media1.png" },
+  { name: "The Sakala", image: "/images/media/media2.png" },
+  { name: "The Samaja", image: "/images/media/media3.png" },
+  { name: "Sambad English", image: "/images/media/media4.png" },
+  { name: "Kanak News", image: "/images/media/media5.png" },
+  { name: "Sambad", image: "/images/media/media6.png" },
 ];
 
 function PartnerLogo({ partner }: { partner: Partner }) {
-  const Icon = partner.icon;
-
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="flex h-20 w-28 items-center justify-center rounded-[1.5rem] border border-[#eef2f7] bg-white">
-        <Icon
-          aria-hidden="true"
-          className={`h-10 w-10 ${partner.accent}`}
-          strokeWidth={2.1}
+      <div className="relative flex h-20 w-28 items-center justify-center overflow-hidden rounded-3xl bg-white">
+        <Image
+          src={partner.image}
+          alt={partner.name}
+          fill
+          className="object-contain p-2"
+          sizes="112px"
         />
       </div>
     </div>
@@ -57,7 +55,7 @@ export function MediaPartnersSection() {
   return (
     <section className="py-18 md:py-22">
       <div className="mx-auto w-full max-w-[1152px] px-6 sm:px-8">
-        <h2 className="text-center text-[1.9rem] font-semibold tracking-[-0.04em] text-[#1a2434] md:text-[1.85rem]">
+        <h2 className="text-center text-[1.9rem] font-semibold tracking-[-0.04em] text-[#1a2434] md:text-[1.25rem]">
           Our Media Partners
         </h2>
 
