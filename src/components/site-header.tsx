@@ -67,8 +67,8 @@ function DropdownCard({
 
   return (
     <div className="relative z-50">
-      <button
-        type="button"
+      <Link
+        href={item.href ?? "#"}
         aria-expanded={isOpen}
         aria-controls={menuId}
         className={`flex items-center gap-1.5 rounded-full px-3 py-2 text-[0.96rem] font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)] ${
@@ -86,7 +86,7 @@ function DropdownCard({
           }`}
           strokeWidth={1.8}
         />
-      </button>
+      </Link>
 
       <div
         id={menuId}
@@ -278,22 +278,33 @@ export function SiteHeader() {
                     key={item.label}
                     className="rounded-[1.35rem] bg-white shadow-[0_10px_20px_rgba(16,44,25,0.06)]"
                   >
-                    <button
-                      type="button"
-                      aria-expanded={expanded}
-                      aria-controls={`mobile-section-${index}`}
-                      className="flex w-full items-center justify-between px-4 py-4 text-left text-sm font-semibold text-[var(--color-text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
-                      onClick={() => toggleMobileSection(index)}
-                    >
-                      <span>{item.label}</span>
-                      <ChevronDown
-                        aria-hidden="true"
-                        className={`h-4 w-4 transition-transform duration-200 ${
-                          expanded ? "rotate-180" : ""
-                        }`}
-                        strokeWidth={1.8}
-                      />
-                    </button>
+                    <div className="flex w-full items-center justify-between px-4 py-4 text-left text-sm font-semibold text-[var(--color-text)]">
+                      <Link
+                        href={item.href ?? "#"}
+                        className="flex-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)] rounded-sm"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                      <button
+                        type="button"
+                        aria-expanded={expanded}
+                        aria-controls={`mobile-section-${index}`}
+                        className="p-1 -mr-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)] rounded-sm"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleMobileSection(index);
+                        }}
+                      >
+                        <ChevronDown
+                          aria-hidden="true"
+                          className={`h-4 w-4 transition-transform duration-200 ${
+                            expanded ? "rotate-180" : ""
+                          }`}
+                          strokeWidth={1.8}
+                        />
+                      </button>
+                    </div>
 
                     <div
                       id={`mobile-section-${index}`}

@@ -23,6 +23,7 @@ export const primaryNav: NavItem[] = [
   },
   {
     label: "About us",
+    href: "/about",
     children: [
       { label: "Who we are", href: "#" },
       { label: "What we do", href: "#" },
@@ -35,6 +36,7 @@ export const primaryNav: NavItem[] = [
   },
   {
     label: "Get Involved",
+    href: "/join",
     children: [
       { label: "Volunteer", href: "#" },
       { label: "Member", href: "#" },
@@ -46,6 +48,7 @@ export const primaryNav: NavItem[] = [
   },
   {
     label: "Internship",
+    href: "/internship",
     children: [
       { label: "About the program", href: "#" },
       { label: "Partnership & Collaborations", href: "#" },
@@ -55,6 +58,7 @@ export const primaryNav: NavItem[] = [
   },
   {
     label: "Resources",
+    href: "/resources",
     children: [
       { label: "Blog", href: "#" },
       { label: "Financials", href: "#" },
