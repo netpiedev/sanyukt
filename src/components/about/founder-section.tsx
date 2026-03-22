@@ -39,7 +39,7 @@ export function FounderSection() {
             <h2 className="mb-3 text-[16px] font-bold text-[#1a1f2e] md:text-[17px]">
               Meet the Founder
             </h2>
-            <h3 className="mb-1 text-4xl sm:text-[42px] md:text-4xl font-semibold tracking-tight bg-linear-to-r from-[#35b86b] to-[#2cb1e3] bg-clip-text text-transparent leading-[1.1]">
+            <h3 className="mb-1 bg-[linear-gradient(90deg,#35b86b_0%,#2eb8b9_46%,#2a97e8_100%)] bg-clip-text text-4xl font-semibold leading-[1.1] tracking-tight text-transparent sm:text-[42px] md:text-4xl">
               SK Sahil
             </h3>
             <p className="mb-6 font-medium text-[#9ca3af] text-[14.5px] sm:text-[15.5px]">
@@ -61,6 +61,7 @@ export function FounderSection() {
                   <>
                     {" "}
                     <button
+                      type="button"
                       onClick={() => setIsExpanded(true)}
                       className="font-semibold text-[#1a1f2e] cursor-pointer hover:text-[#35b86b] transition-colors"
                     >
@@ -86,6 +87,7 @@ export function FounderSection() {
                     of young individuals across Odisha, demonstrating that with
                     purpose, passion, and guidance.{" "}
                     <button
+                      type="button"
                       onClick={() => setIsExpanded(false)}
                       className="font-semibold text-[#1a1f2e] cursor-pointer hover:text-[#35b86b] transition-colors"
                     >

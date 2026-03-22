@@ -1,13 +1,14 @@
-import { HeroSection } from "@/components/about/hero-section";
-import { ValuesSection } from "@/components/about/values-section";
-import { TimelineSection } from "@/components/about/timeline-section";
 import { FounderSection } from "@/components/about/founder-section";
-import { faqs } from "@/data/faqs";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
+import { HeroSection } from "@/components/about/hero-section";
+import { TimelineSection } from "@/components/about/timeline-section";
+import { ValuesSection } from "@/components/about/values-section";
+import { WhatWeDoSection } from "@/components/about/what-we-do-section";
 import { WatchVideoSection } from "@/components/donate/watch-video-section";
 import { FaqSection } from "@/components/faq-section";
 import { MediaPartnersSection } from "@/components/home/media-partners-section";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { faqs } from "@/data/faqs";
 
 export default function AboutPage() {
   return (
@@ -17,6 +18,7 @@ export default function AboutPage() {
       <FounderSection />
       <WatchVideoSection />
       <ValuesSection />
+      <WhatWeDoSection />
       <TimelineSection />
       <MediaPartnersSection />
       <FaqSection entries={faqs} title="Frequently asked Questions" />
