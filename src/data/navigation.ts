@@ -40,7 +40,7 @@ export const primaryNav: NavItem[] = [
     children: [
       { label: "Volunteer", href: "#" },
       { label: "Member", href: "#" },
-      { label: "Corporate partners", href: "#" },
+      { label: "Corporate partners", href: "/corporate" },
       { label: "Internship", href: "#" },
       { label: "Join our teams", href: "#" },
       { label: "Collaboration", href: "#" },
