@@ -9,6 +9,7 @@ import { MembershipSection } from "@/components/join/membership-section";
 import { MembershipFormSection } from "@/components/join/membership-form-section";
 import { VolunteerSection } from "@/components/join/volunteer-section";
 import { TeamsSection } from "@/components/join/teams-section";
+import { TeamApplicationFormSection } from "@/components/join/team-application-form-section";
 
 export default function JoinPage() {
   return (
@@ -19,6 +20,7 @@ export default function JoinPage() {
       <MembershipFormSection />
       <VolunteerSection />
       <TeamsSection />
+      <TeamApplicationFormSection />
       <MediaPartnersSection />
       <SupportersTestimonialsSection />
       <FaqSection entries={faqs} title="Frequently asked Questions" />
