@@ -1,3 +1,4 @@
+import { BenefitsSection } from "@/components/corporate/benefits-section";
 import { CorporateHeroSection } from "@/components/corporate/corporate-hero-section";
 import { CorporateShowcaseSection } from "@/components/corporate/corporate-showcase-section";
 import { PartnerWithUsSection } from "@/components/corporate/partner-with-us-section";
@@ -12,6 +13,7 @@ export default function CorporatePage() {
     <main className="min-h-screen bg-[var(--color-surface)] text-[var(--color-text)]">
       <SiteHeader />
       <CorporateHeroSection />
+      <BenefitsSection />
       <CorporateShowcaseSection />
       <PartnerWithUsSection />
       <MediaPartnersSection />
