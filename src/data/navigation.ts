@@ -60,7 +60,7 @@ export const primaryNav: NavItem[] = [
     label: "Resources",
     href: "/resources",
     children: [
-      { label: "Blog", href: "#" },
+      { label: "Blog", href: "/blog" },
       { label: "Financials", href: "#" },
       { label: "Statement", href: "#" },
       { label: "Press release", href: "#" },
