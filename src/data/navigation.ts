@@ -48,7 +48,7 @@ export const primaryNav: NavItem[] = [
   },
   {
     label: "Internship",
-    href: "/#",
+    href: "/intern",
     children: [
       { label: "About the program", href: "#" },
       { label: "Partnership & Collaborations", href: "#" },
