@@ -60,8 +60,26 @@ button {
   will-change: transform;
 }
 
+@keyframes star-interns-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.star-interns-track {
+  animation: star-interns-marquee 26s linear infinite;
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .corporate-marquee-track {
+    animation: none;
+  }
+
+  .star-interns-track {
     animation: none;
   }
 }
