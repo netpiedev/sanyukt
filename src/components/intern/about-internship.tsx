@@ -41,9 +41,9 @@ export function AboutInternshipSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-[#f7f9fc] py-16 md:py-20">
+    <section className="bg-[#f7f9fc] pb-0 pt-16 md:pb-0 md:pt-20">
       <div className="grid w-full gap-12 px-6 sm:px-8 md:grid-cols-[980px_minmax(0,1fr)] md:items-end md:gap-0 md:px-0">
-        <div className="w-full max-w-[640px] md:max-w-none md:pr-10 md:pl-[max(2rem,calc((100vw-1152px)/2+2rem))]">
+        <div className="w-full max-w-[640px] md:max-w-none md:pr-10 md:pl-[max(8rem,calc((100vw-1152px)/2+2rem))]">
           <h2 className="text-[2.1rem] font-semibold tracking-tight text-[#35b86b] sm:text-[2.35rem]">
             About Internship
           </h2>
@@ -56,7 +56,7 @@ export function AboutInternshipSection() {
             Graphic Design, Video Editing, and Event Management.
           </p>
 
-          <div className="mt-12 space-y-5">
+          <div className="mt-12 mb-16 space-y-5">
             {accordionItems.map((item, index) => {
               const isOpen = openIndex === index;
 
@@ -114,8 +114,8 @@ export function AboutInternshipSection() {
             src="/images/intern/about.png"
             alt="About Internship"
             width={500}
-            height={500}
-            className="h-auto w-full max-w-88 object-contain md:w-[500px]"
+            height={580}
+            className="h-auto w-full max-w-88 object-contain md:w-[580px]"
             priority={false}
           />
         </div>
