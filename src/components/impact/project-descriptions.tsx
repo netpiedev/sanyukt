@@ -112,7 +112,7 @@ function ProjectImageCluster({
 function ProjectBlock({ item }: { item: ProjectItem }) {
   return (
     <div className="grid justify-center gap-8 px-6 text-center md:grid-cols-[476px_516px] md:items-center md:justify-between md:gap-0 md:text-left">
-      <div className={item.reverse ? "md:order-2" : ""}>
+      <div className={item.reverse ? "md:order-2 md:pl-8" : ""}>
         <GradientTitle title={item.title} />
         <p className="mx-auto mt-4 w-full max-w-[440px] text-[14px] leading-[24px] text-[#333840] md:mx-0 md:text-[16px]">
           {item.description}
