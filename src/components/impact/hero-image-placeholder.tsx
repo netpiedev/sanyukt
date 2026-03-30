@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const impactStats = [
   {
-    value: "5,00,00,000+",
-    mobileValue: "50mn+",
-    label: "Lives Impacted",
+    value: "1 cr+",
+    mobileValue: "1 cr+",
+    label: "People reached",
   },
   {
     value: "20+",
@@ -12,9 +12,9 @@ const impactStats = [
     label: "Districts Covered",
   },
   {
-    value: "3,000+",
-    mobileValue: "3,000+",
-    label: "Volunteers & Members",
+    value: "25+",
+    mobileValue: "25+",
+    label: "Projects completed",
   },
   {
     value: "3,000+",
