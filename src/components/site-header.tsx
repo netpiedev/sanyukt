@@ -35,7 +35,7 @@ function ArrowRight() {
   return (
     <ChevronRight
       aria-hidden="true"
-      className="h-4 w-4 text-[var(--color-muted)] transition-transform duration-200 group-hover:translate-x-0.5"
+      className="h-4 w-4 text-(--color-muted) transition-transform duration-200 group-hover:translate-x-0.5"
       strokeWidth={1.8}
     />
   );
@@ -58,7 +58,7 @@ function DropdownCard({
     return (
       <Link
         href={item.href ?? "#"}
-        className="rounded-full px-3 py-2 text-[0.96rem] font-medium text-[var(--color-muted)] transition-colors duration-200 hover:text-[var(--color-text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
+        className="rounded-full px-3 py-2 text-[0.96rem] font-medium text-(--color-muted) transition-colors duration-200 hover:text-(--color-text) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
       >
         {item.label}
       </Link>
@@ -71,10 +71,10 @@ function DropdownCard({
         href={item.href ?? "#"}
         aria-expanded={isOpen}
         aria-controls={menuId}
-        className={`flex items-center gap-1.5 rounded-full px-3 py-2 text-[0.96rem] font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)] ${
+        className={`flex items-center gap-1.5 rounded-full px-3 py-2 text-[0.96rem] font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button) ${
           isOpen
-            ? "bg-[var(--color-soft-green)] text-[var(--color-text)]"
-            : "text-[var(--color-muted)] hover:text-[var(--color-text)]"
+            ? "bg-(--color-soft-green) text-(--color-text)"
+            : "text-(--color-muted) hover:text-(--color-text)"
         }`}
         onMouseEnter={() => onOpen(index)}
       >
@@ -92,7 +92,7 @@ function DropdownCard({
         id={menuId}
         role="menu"
         aria-label={item.label}
-        className={`absolute left-0 top-[calc(100%+1.2rem)] z-50 w-[min(19rem,30vw)] origin-top-left rounded-[1.1rem] border border-black/5 bg-[var(--color-surface)] p-2 shadow-[0_22px_45px_rgba(16,44,25,0.18)] transition-all duration-200 ${
+        className={`absolute left-0 top-[calc(100%+1.2rem)] z-50 w-[min(19rem,30vw)] origin-top-left rounded-[1.1rem] border border-black/5 bg-(--color-surface) p-2 shadow-[0_22px_45px_rgba(16,44,25,0.18)] transition-all duration-200 ${
           isOpen
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-2 opacity-0"
@@ -102,12 +102,12 @@ function DropdownCard({
           {item.children.map((child) => (
             <li
               key={child.label}
-              className="border-b border-[var(--color-line)] last:border-b-0"
+              className="border-b border-(--color-line) last:border-b-0"
             >
               <Link
                 href={child.href}
                 role="menuitem"
-                className="group flex items-center justify-between gap-4 px-4 py-3 text-sm font-medium text-[var(--color-text)] transition-colors duration-200 hover:bg-[#f8fbf6] focus-visible:outline-none focus-visible:bg-[#f8fbf6]"
+                className="group flex items-center justify-between gap-4 px-4 py-3 text-sm font-medium text-(--color-text) transition-colors duration-200 hover:bg-[#f8fbf6] focus-visible:outline-none focus-visible:bg-[#f8fbf6]"
               >
                 <span>{child.label}</span>
                 <ArrowRight />
@@ -172,7 +172,7 @@ export function SiteHeader() {
   };
 
   return (
-    <header ref={headerRef} className="relative z-50 bg-[var(--color-surface)]">
+    <header ref={headerRef} className="relative z-50 bg-(--color-surface)">
       <div className="mx-auto max-w-[1920px] px-6 py-7 sm:px-8 lg:px-10">
         <nav
           aria-label="Primary navigation"
@@ -198,12 +198,12 @@ export function SiteHeader() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`inline-flex items-center justify-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)] ${
+                  className={`inline-flex items-center justify-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button) ${
                     item.variant === "solid"
-                      ? "border-[var(--color-button)] bg-[var(--color-button)] text-white hover:-translate-y-0.5 hover:brightness-105"
+                      ? "border-(--color-button) bg-(--color-button) text-white hover:-translate-y-0.5 hover:brightness-105"
                       : item.variant === "outline"
-                        ? "border-[var(--color-border-strong)] bg-white text-[var(--color-text)] hover:border-[var(--color-button)] hover:text-[var(--color-button)]"
-                        : "border-transparent bg-transparent px-2 text-[var(--color-muted)] hover:text-[var(--color-text)]"
+                        ? "border-(--color-border-strong) bg-white text-(--color-text) hover:border-(--color-button) hover:text-(--color-button)"
+                        : "border-transparent bg-transparent px-2 text-(--color-muted) hover:text-(--color-text)"
                   }`}
                 >
                   {item.variant === "ghost" ? (
@@ -211,7 +211,7 @@ export function SiteHeader() {
                       <span>Talk to us</span>
                       <CircleHelp
                         aria-hidden="true"
-                        className="h-4 w-4 text-[var(--color-muted)]"
+                        className="h-4 w-4 text-(--color-muted)"
                         strokeWidth={2}
                       />
                     </>
@@ -229,7 +229,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-3 min-[1100px]:hidden">
             <Link
               href="/donate"
-              className="inline-flex items-center justify-center rounded-full bg-[#39B54A] px-5 py-3 text-sm font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
+              className="inline-flex items-center justify-center rounded-full bg-[#39B54A] px-5 py-3 text-sm font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
             >
               Donate now
             </Link>
@@ -237,7 +237,7 @@ export function SiteHeader() {
               type="button"
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full text-[var(--color-muted)] transition-colors duration-200 hover:bg-[var(--color-soft-green)] hover:text-[var(--color-text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
+              className="inline-flex h-12 w-12 items-center justify-center rounded-full text-(--color-muted) transition-colors duration-200 hover:bg-(--color-soft-green) hover:text-(--color-text) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
               onClick={() => setMobileOpen((current) => !current)}
             >
               <span className="sr-only">Toggle navigation</span>
@@ -249,12 +249,10 @@ export function SiteHeader() {
         <div
           id="mobile-menu"
           className={`overflow-hidden transition-[max-height,opacity,margin] duration-300 ease-out min-[1100px]:hidden ${
-            mobileOpen
-              ? "mt-6 max-h-[48rem] opacity-100"
-              : "mt-0 max-h-0 opacity-0"
+            mobileOpen ? "mt-6 max-h-192 opacity-100" : "mt-0 max-h-0 opacity-0"
           }`}
         >
-          <div className="rounded-[1.6rem] border border-[var(--color-line)] bg-[var(--color-soft-green)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]">
+          <div className="rounded-[1.6rem] border border-(--color-line) bg-(--color-soft-green) p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]">
             <div className="space-y-2">
               {primaryNav.map((item, index) => {
                 const hasChildren = Boolean(item.children?.length);
@@ -265,7 +263,7 @@ export function SiteHeader() {
                     <Link
                       key={item.label}
                       href={item.href ?? "#"}
-                      className="flex items-center justify-between rounded-2xl bg-white px-4 py-3.5 text-sm font-semibold text-[var(--color-text)] shadow-[0_10px_20px_rgba(16,44,25,0.06)]"
+                      className="flex items-center justify-between rounded-2xl bg-white px-4 py-3.5 text-sm font-semibold text-(--color-text) shadow-[0_10px_20px_rgba(16,44,25,0.06)]"
                     >
                       <span>{item.label}</span>
                       <ArrowRight />
@@ -278,10 +276,10 @@ export function SiteHeader() {
                     key={item.label}
                     className="rounded-[1.35rem] bg-white shadow-[0_10px_20px_rgba(16,44,25,0.06)]"
                   >
-                    <div className="flex w-full items-center justify-between px-4 py-4 text-left text-sm font-semibold text-[var(--color-text)]">
+                    <div className="flex w-full items-center justify-between px-4 py-4 text-left text-sm font-semibold text-(--color-text)">
                       <Link
                         href={item.href ?? "#"}
-                        className="flex-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)] rounded-sm"
+                        className="flex-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button) rounded-sm"
                         onClick={() => setMobileOpen(false)}
                       >
                         {item.label}
@@ -290,7 +288,7 @@ export function SiteHeader() {
                         type="button"
                         aria-expanded={expanded}
                         aria-controls={`mobile-section-${index}`}
-                        className="p-1 -mr-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)] rounded-sm"
+                        className="p-1 -mr-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button) rounded-sm"
                         onClick={(e) => {
                           e.preventDefault();
                           toggleMobileSection(index);
@@ -314,15 +312,15 @@ export function SiteHeader() {
                           : "max-h-0 px-2 pb-0 opacity-0"
                       }`}
                     >
-                      <ul className="overflow-hidden rounded-[1rem] border border-[var(--color-line)] bg-[#fbfcfa]">
+                      <ul className="overflow-hidden rounded-2xl border border-(--color-line) bg-[#fbfcfa]">
                         {item.children?.map((child) => (
                           <li
                             key={child.label}
-                            className="border-b border-[var(--color-line)] last:border-b-0"
+                            className="border-b border-(--color-line) last:border-b-0"
                           >
                             <Link
                               href={child.href}
-                              className="flex items-center justify-between px-4 py-3 text-sm text-[var(--color-text)]"
+                              className="flex items-center justify-between px-4 py-3 text-sm text-(--color-text)"
                             >
                               <span>{child.label}</span>
                               <ArrowRight />
@@ -343,10 +341,10 @@ export function SiteHeader() {
                   href={item.href}
                   className={`inline-flex items-center justify-center gap-2 rounded-full border px-5 py-3.5 text-sm font-semibold transition-all duration-200 ${
                     item.variant === "solid"
-                      ? "border-[var(--color-button)] bg-[var(--color-button)] text-white"
+                      ? "border-(--color-button) bg-(--color-button) text-white"
                       : item.variant === "outline"
-                        ? "border-[var(--color-border-strong)] bg-white text-[var(--color-text)]"
-                        : "border-transparent bg-white text-[var(--color-text)]"
+                        ? "border-(--color-border-strong) bg-white text-(--color-text)"
+                        : "border-transparent bg-white text-(--color-text)"
                   }`}
                 >
                   {item.variant === "ghost" ? (
@@ -354,7 +352,7 @@ export function SiteHeader() {
                       <span>Talk to us</span>
                       <CircleHelp
                         aria-hidden="true"
-                        className="h-4 w-4 text-[var(--color-muted)]"
+                        className="h-4 w-4 text-(--color-muted)"
                         strokeWidth={2}
                       />
                     </>

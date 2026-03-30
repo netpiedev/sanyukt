@@ -2,6 +2,7 @@
 
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
+import { faqs } from "@/data/faqs";
 
 export type FaqEntry = {
   id: number | string;
@@ -30,7 +31,7 @@ function FaqItem({
         aria-expanded={isOpen}
         onClick={onToggle}
       >
-        <span className="max-w-[58rem] text-[1.05rem] font-semibold tracking-[-0.03em] text-[#1a2434] sm:text-[1.12rem] md:text-[1.1rem]">
+        <span className="max-w-232 text-[1.05rem] font-semibold tracking-[-0.03em] text-[#1a2434] sm:text-[1.12rem] md:text-[1.1rem]">
           {question}
         </span>
         {isOpen ? (
@@ -50,10 +51,10 @@ function FaqItem({
 
       <div
         className={`overflow-hidden transition-[max-height,opacity,margin] duration-300 ease-out ${
-          isOpen ? "mt-3 max-h-[28rem] opacity-100" : "mt-0 max-h-0 opacity-0"
+          isOpen ? "mt-3 max-h-112 opacity-100" : "mt-0 max-h-0 opacity-0"
         }`}
       >
-        <div className="max-w-[60rem] space-y-4">
+        <div className="max-w-240 space-y-4">
           {paragraphs.map((paragraph) => (
             <p
               key={paragraph}
@@ -68,24 +69,18 @@ function FaqItem({
   );
 }
 
-export function FaqSection({
-  entries,
-  title = "Frequently asked Questions",
-}: {
-  entries: readonly FaqEntry[];
-  title?: string;
-}) {
+export function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
     <section className="bg-white py-18 md:py-24">
       <div className="mx-auto w-full max-w-[1152px] px-6 sm:px-8">
         <h2 className="text-[2.12rem] font-semibold tracking-[-0.05em] text-[#121c2c] sm:text-[2.25rem] md:text-[2.5rem]">
-          {title}
+          Frequently asked Questions
         </h2>
 
         <div className="mt-12 md:mt-14">
-          {entries.map((faq, index) => (
+          {faqs.map((faq, index) => (
             <FaqItem
               key={faq.id}
               answer={faq.answer}

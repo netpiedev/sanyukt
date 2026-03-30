@@ -83,23 +83,23 @@ export function SiteFooter() {
               <BrandMark className="scale-[0.82] origin-center lg:origin-left" />
             </div>
 
-            <h2 className="mt-6 text-[1.95rem] font-semibold leading-[1.03] tracking-[-0.055em] sm:text-[2.4rem] md:text-[2.65rem] lg:max-w-[32rem]">
+            <h2 className="mt-6 text-[1.95rem] font-semibold leading-[1.03] tracking-[-0.055em] sm:text-[2.4rem] md:text-[2.65rem] lg:max-w-lg">
               <span className="bg-[linear-gradient(90deg,#35b86b_0%,#2eb8b9_46%,#2a97e8_100%)] bg-clip-text text-transparent">
                 Bond of Togetherness
               </span>
             </h2>
 
-            <p className="mx-auto mt-5 max-w-[32rem] text-balance text-[0.82rem] leading-[1.7] text-[#718096] sm:text-[0.9rem] lg:mx-0">
+            <p className="mx-auto mt-5 max-w-lg text-balance text-[0.82rem] leading-[1.7] text-[#718096] sm:text-[0.9rem] lg:mx-0">
               We focus on voluntary involvement of people in our social work and
               every person who is associated to the community have their
               responsibility towards it&apos;s development and care.
             </p>
 
-            <div className="mt-5 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:w-full lg:max-w-[32rem] lg:justify-start">
-              <SupportCauseButton className="w-full sm:w-auto sm:min-w-[10rem] px-6 py-3 text-[0.8rem] font-semibold" />
+            <div className="mt-5 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:w-full lg:max-w-lg lg:justify-start">
+              <SupportCauseButton className="w-full sm:w-auto sm:min-w-40 px-6 py-3 text-[0.8rem] font-semibold" />
               <Link
                 href="#"
-                className="inline-flex w-full sm:w-auto sm:min-w-[10rem] items-center justify-center gap-3 rounded-full border border-[#cfd8e4] bg-white px-5 py-3 text-[0.8rem] font-semibold text-[#1a2434] transition-colors duration-200 hover:border-[var(--color-button)] hover:text-[var(--color-button)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
+                className="inline-flex w-full sm:w-auto sm:min-w-40 items-center justify-center gap-3 rounded-full border border-[#cfd8e4] bg-white px-5 py-3 text-[0.8rem] font-semibold text-[#1a2434] transition-colors duration-200 hover:border-(--color-button) hover:text-(--color-button) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
               >
                 <span>Share Feedback</span>
                 <MessageSquareText
@@ -158,7 +158,7 @@ export function SiteFooter() {
                         key={item.label}
                         href="#"
                         aria-label={item.label}
-                        className="text-[#a2adbc] transition-colors duration-200 hover:text-[var(--color-button)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
+                        className="text-[#a2adbc] transition-colors duration-200 hover:text-(--color-button) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
                       >
                         <Icon
                           aria-hidden="true"
@@ -184,7 +184,7 @@ export function SiteFooter() {
                     <li key={link}>
                       <Link
                         href="#"
-                        className="transition-colors duration-200 hover:text-[var(--color-button)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
+                        className="transition-colors duration-200 hover:text-(--color-button) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
                       >
                         {link}
                       </Link>
@@ -204,7 +204,7 @@ export function SiteFooter() {
                 <Link
                   key={link}
                   href="#"
-                  className="transition-colors duration-200 hover:text-[var(--color-button)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
+                  className="transition-colors duration-200 hover:text-(--color-button) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
                 >
                   {link}
                 </Link>

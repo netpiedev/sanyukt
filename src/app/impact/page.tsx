@@ -5,7 +5,6 @@ import { PastProjectsSection } from "@/components/impact/past-projects-section";
 import { ProjectDescriptions } from "@/components/impact/project-descriptions";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { faqs } from "@/data/faqs";
 
 export default function ImpactPage() {
   return (
@@ -15,7 +14,7 @@ export default function ImpactPage() {
       <PastProjectsSection />
       <ProjectDescriptions />
       <MediaPartnersSection />
-      <FaqSection entries={faqs} title="Frequently asked Questions" />
+      <FaqSection />
       <SiteFooter />
     </main>
   );

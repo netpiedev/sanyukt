@@ -9,7 +9,6 @@ import { TeamsSection } from "@/components/join/teams-section";
 import { VolunteerSection } from "@/components/join/volunteer-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { faqs } from "@/data/faqs";
 
 export default function JoinPage() {
   return (
@@ -23,7 +22,7 @@ export default function JoinPage() {
       <TeamApplicationFormSection />
       <MediaPartnersSection />
       <SupportersTestimonialsSection />
-      <FaqSection entries={faqs} title="Frequently asked Questions" />
+      <FaqSection />
       <SiteFooter />
     </main>
   );

@@ -9,7 +9,6 @@ import { WhatWeDoSection } from "@/components/home/what-we-do-section";
 import { WhySanyuktSection } from "@/components/home/why-sanyukt-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { faqs } from "@/data/faqs";
 
 export default function Home() {
   return (
@@ -23,7 +22,7 @@ export default function Home() {
       <WhySanyuktSection />
       <MediaPartnersSection />
       <SupportersTestimonialsSection />
-      <FaqSection entries={faqs} title="Frequently asked Questions" />
+      <FaqSection />
       <SiteFooter />
     </main>
   );

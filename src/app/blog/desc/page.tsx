@@ -3,7 +3,6 @@ import { FaqSection } from "@/components/faq-section";
 import { MediaPartnersSection } from "@/components/home/media-partners-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { faqs } from "@/data/faqs";
 
 export default function BlogDescPage() {
   return (
@@ -11,7 +10,7 @@ export default function BlogDescPage() {
       <SiteHeader />
       <BlogDescArticle />
       <MediaPartnersSection />
-      <FaqSection entries={faqs} title="Frequently asked Questions" />
+      <FaqSection />
       <SiteFooter />
     </main>
   );

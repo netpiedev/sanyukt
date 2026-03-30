@@ -9,7 +9,6 @@ import { UniversitiesCollegesPartnershipSection } from "@/components/intern/univ
 import { UniversitiesJoinedSection } from "@/components/intern/universities-joined-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { faqs } from "@/data/faqs";
 
 export default function InternPage() {
   return (
@@ -23,7 +22,7 @@ export default function InternPage() {
       <FormSection />
       <BackgroundVerificationSection />
       <MediaPartnersSection />
-      <FaqSection entries={faqs} title="Frequently asked Questions" />
+      <FaqSection />
       <SiteFooter />
     </main>
   );

@@ -7,7 +7,6 @@ import { SupportersTestimonialsSection } from "@/components/home/supporters-test
 import { WhySanyuktSection } from "@/components/home/why-sanyukt-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { faqs } from "@/data/faqs";
 
 export default function DonatePage() {
   return (
@@ -19,7 +18,7 @@ export default function DonatePage() {
       <WhySanyuktSection />
       <MediaPartnersSection />
       <SupportersTestimonialsSection />
-      <FaqSection entries={faqs} title="Frequently asked Questions" />
+      <FaqSection />
       <SiteFooter />
     </main>
   );

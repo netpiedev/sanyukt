@@ -4,7 +4,6 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { HeroSection } from "@/components/team/hero";
 import { ProfessionalsSection } from "@/components/team/professionals-section";
-import { faqs } from "@/data/faqs";
 
 export default function TeamPage() {
   return (
@@ -13,7 +12,7 @@ export default function TeamPage() {
       <HeroSection />
       <ProfessionalsSection />
       <MediaPartnersSection />
-      <FaqSection entries={faqs} title="Frequently asked Questions" />
+      <FaqSection />
       <SiteFooter />
     </main>
   );
