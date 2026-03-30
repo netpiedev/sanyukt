@@ -13,7 +13,7 @@ import { faqs } from "@/data/faqs";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[var(--color-surface)] text-[var(--color-text)]">
+    <main className="min-h-screen bg-(--color-surface) text-(--color-text)">
       <SiteHeader />
       <HomeHero />
       <BuildingChangeSection />

@@ -1,4 +1,17 @@
+import { Atkinson_Hyperlegible_Next, Lexend_Deca } from "next/font/google";
 import Image from "next/image";
+
+const lexendDeca = Lexend_Deca({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const atkinsonHyperlegibleNext = Atkinson_Hyperlegible_Next({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
 const impactStats = [
   {
@@ -25,10 +38,10 @@ const impactStats = [
 
 export function HeroImagePlaceholder() {
   return (
-    <div className="overflow-hidden rounded-[2rem] border border-[#dfe6ee] bg-white md:rounded-[2.6rem]">
-      <div className="relative h-[18rem] overflow-hidden bg-[#d8dde3] sm:h-[22rem] md:h-[32rem]">
+    <div className="overflow-hidden rounded-4xl border border-[#dfe6ee] bg-white md:rounded-[2.6rem]">
+      <div className="relative h-72 overflow-hidden bg-[#d8dde3] sm:h-88 md:h-128">
         <Image
-          src="/images/impact/hero.png"
+          src="/images/hero.png"
           alt="Community gathering"
           fill
           sizes="(max-width: 768px) 100vw, 1071px"
@@ -36,19 +49,22 @@ export function HeroImagePlaceholder() {
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-y-6 border-t border-[#dfe6ee] bg-[#f6f8fb] px-4 py-6 text-center sm:px-6 md:grid-cols-4 md:gap-4 md:px-10 md:py-7">
+      <div className="grid grid-cols-2 gap-y-5 bg-[#F8FAFC] px-4 py-5 text-center sm:px-5 md:grid-cols-4 md:gap-4 md:py-5">
         {impactStats.map((stat) => (
-          <div
-            key={stat.label}
-            className="font-[family-name:var(--font-geist-sans)]"
-          >
-            <p className="text-[2rem] font-extrabold tracking-[-0.035em] text-[#2ba2e6] md:hidden">
+          <div key={stat.label}>
+            <p
+              className={`${atkinsonHyperlegibleNext.className} text-[24px] font-bold tracking-[-0.03em] text-[#27AAE1] md:hidden`}
+            >
               {stat.mobileValue}
             </p>
-            <p className="hidden text-[1.5rem] font-extrabold tracking-[-0.035em] text-[#2ba2e6] md:block">
+            <p
+              className={`${atkinsonHyperlegibleNext.className} hidden text-[24px] font-bold leading-[130%] tracking-[-0.03em] text-[#27AAE1] md:block`}
+            >
               {stat.value}
             </p>
-            <p className="mt-.75 text-[.8rem] font-medium tracking-[-0.02em] text-[var(--color-text)] sm:text-[1rem]">
+            <p
+              className={`${lexendDeca.className} mt-.75 text-[14px] leading-[24px] text-(--color-text)`}
+            >
               {stat.label}
             </p>
           </div>
