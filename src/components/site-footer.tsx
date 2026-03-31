@@ -10,7 +10,7 @@ import {
   Phone,
   Twitter,
 } from "lucide-react";
-import { Atkinson_Hyperlegible_Next, Lexend_Deca } from "next/font/google";
+import { Lexend_Deca } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -27,61 +27,61 @@ const footerColumns = [
   {
     title: "Who we are",
     links: [
-      "About us",
-      "Vision",
-      "Mission",
-      "Our founder",
-      "Team Sanyukt",
-      "Our Impact",
+      { label: "About us", href: "/about" },
+      { label: "Vision", href: "#" },
+      { label: "Mission", href: "#" },
+      { label: "Our founder", href: "#" },
+      { label: "Team Sanyukt", href: "/team" },
+      { label: "Our Impact", href: "/impact" },
     ],
   },
   {
     title: "Our Campaigns",
     links: [
-      "Winter is coming",
-      "Green Odisha",
-      "Women Empowerment",
-      "The Biggest ride of India",
+      { label: "Winter is coming", href: "#" },
+      { label: "Green Odisha", href: "#" },
+      { label: "Women Empowerment", href: "#" },
+      { label: "The Biggest ride of India", href: "#" },
     ],
   },
   {
     title: "What we do",
     links: [
-      "Environment",
-      "Skilled Development",
-      "Women Empowerment",
-      "Food Security",
-      "Awareness",
+      { label: "Environment", href: "#" },
+      { label: "Skilled Development", href: "#" },
+      { label: "Women Empowerment", href: "#" },
+      { label: "Food Security", href: "#" },
+      { label: "Awareness", href: "#" },
     ],
   },
   {
     title: "Get Involved",
     links: [
-      "Volunteer",
-      "Members",
-      "Internship",
-      "Governing bodies",
-      "Tech circles",
-      "Corporate",
-      "CSR Opportunity",
+      { label: "Volunteer", href: "#" },
+      { label: "Members", href: "#" },
+      { label: "Internship", href: "#" },
+      { label: "Governing bodies", href: "#" },
+      { label: "Tech circles", href: "#" },
+      { label: "Corporate", href: "#" },
+      { label: "CSR Opportunity", href: "#" },
     ],
   },
 ] as const;
 
 const legalLinks = [
-  "Privacy Policy",
-  "Blog",
-  "Online Donation",
-  "Terms & Condition",
-  "Financial Report",
+  { label: "Privacy Policy", href: "#" },
+  { label: "Blog", href: "/blog" },
+  { label: "Online Donation", href: "/donate" },
+  { label: "Terms & Condition", href: "#" },
+  { label: "Financial Report", href: "#" },
 ] as const;
 
 const socialLinks = [
-  { label: "Facebook", icon: Facebook },
-  { label: "LinkedIn", icon: Linkedin },
-  { label: "Instagram", icon: Instagram },
-  { label: "X", icon: Twitter },
-  { label: "Threads", icon: MessageSquareText },
+  { label: "Facebook", href: "#", icon: Facebook },
+  { label: "LinkedIn", href: "#", icon: Linkedin },
+  { label: "Instagram", href: "#", icon: Instagram },
+  { label: "X", href: "#", icon: Twitter },
+  { label: "Threads", href: "#", icon: MessageSquareText },
 ] as const;
 
 export function SiteFooter() {
@@ -190,7 +190,7 @@ export function SiteFooter() {
                     return (
                       <Link
                         key={item.label}
-                        href="#"
+                        href={item.href}
                         aria-label={item.label}
                         className="text-[#a2adbc] transition-colors duration-200 hover:text-(--color-button) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
                       >
@@ -215,12 +215,12 @@ export function SiteFooter() {
                 </h3>
                 <ul className="mt-4 space-y-4 text-[14px] leading-[20px] text-[#697586]">
                   {column.links.map((link) => (
-                    <li key={link}>
+                    <li key={link.label}>
                       <Link
-                        href="#"
+                        href={link.href}
                         className="transition-colors duration-200 hover:text-(--color-button) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
                       >
-                        {link}
+                        {link.label}
                       </Link>
                     </li>
                   ))}
@@ -236,11 +236,11 @@ export function SiteFooter() {
             <div className="flex flex-col items-center gap-5 sm:flex-row sm:flex-wrap sm:justify-center lg:flex-1 lg:justify-between lg:gap-8 lg:pl-10">
               {legalLinks.map((link) => (
                 <Link
-                  key={link}
-                  href="#"
+                  key={link.label}
+                  href={link.href}
                   className="transition-colors duration-200 hover:text-(--color-button) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
                 >
-                  {link}
+                  {link.label}
                 </Link>
               ))}
             </div>
