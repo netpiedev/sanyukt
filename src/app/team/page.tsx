@@ -1,5 +1,5 @@
 import { FaqSection } from "@/components/faq-section";
-import { MediaPartnersSection } from "@/components/home/media-partners-section";
+import { MediaPartnersSection } from "@/components/media-partners-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { HeroSection } from "@/components/team/hero";

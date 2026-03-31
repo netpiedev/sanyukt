@@ -1,5 +1,5 @@
 import { FaqSection } from "@/components/faq-section";
-import { MediaPartnersSection } from "@/components/home/media-partners-section";
+import { MediaPartnersSection } from "@/components/media-partners-section";
 import { AboutInternshipSection } from "@/components/intern/about-internship";
 import { BackgroundVerificationSection } from "@/components/intern/background-verification-section";
 import { FormSection } from "@/components/intern/form";

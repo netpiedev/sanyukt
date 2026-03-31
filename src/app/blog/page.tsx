@@ -2,7 +2,7 @@ import { BlogGrid } from "@/components/blog/blog-grid";
 import { HeroSection } from "@/components/blog/hero-section";
 import { TeamSpotlightSection } from "@/components/blog/team-spotlight-section";
 import { FaqSection } from "@/components/faq-section";
-import { MediaPartnersSection } from "@/components/home/media-partners-section";
+import { MediaPartnersSection } from "@/components/media-partners-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
