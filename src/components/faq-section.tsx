@@ -24,26 +24,26 @@ function FaqItem({
   const paragraphs = answer.split("\n\n");
 
   return (
-    <div className="py-7 md:py-8">
+    <div className="px-0 lg:px-6">
       <button
         type="button"
         className="flex w-full items-start justify-between gap-8 text-left"
         aria-expanded={isOpen}
         onClick={onToggle}
       >
-        <span className="max-w-232 text-[1.05rem] font-semibold tracking-[-0.03em] text-[#1a2434] sm:text-[1.12rem] md:text-[1.1rem]">
+        <span className="text-[16px] leading-[24px] font-semibold text-[#121926] lg:text-[20px] lg:leading-[28px]">
           {question}
         </span>
         {isOpen ? (
           <Minus
             aria-hidden="true"
-            className="mt-1 h-5 w-5 shrink-0 text-[#8090a4]"
+            className="mt-0.5 h-6 w-6 shrink-0 text-[#697586]"
             strokeWidth={2.2}
           />
         ) : (
           <Plus
             aria-hidden="true"
-            className="mt-1 h-5 w-5 shrink-0 text-[#8090a4]"
+            className="mt-0.5 h-6 w-6 shrink-0 text-[#697586]"
             strokeWidth={2.2}
           />
         )}
@@ -51,14 +51,14 @@ function FaqItem({
 
       <div
         className={`overflow-hidden transition-[max-height,opacity,margin] duration-300 ease-out ${
-          isOpen ? "mt-3 max-h-112 opacity-100" : "mt-0 max-h-0 opacity-0"
+          isOpen ? "mt-2 max-h-112 opacity-100" : "mt-0 max-h-0 opacity-0"
         }`}
       >
-        <div className="max-w-240 space-y-4">
+        <div className="max-w-[720px] space-y-4">
           {paragraphs.map((paragraph) => (
             <p
               key={paragraph}
-              className="text-[0.98rem] leading-[1.7] text-[#3e4b5e] md:text-[0.96rem]"
+              className="text-[14px] leading-[24px] font-normal text-[#333840] lg:text-[16px]"
             >
               {paragraph}
             </p>
@@ -73,13 +73,13 @@ export function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="bg-white py-18 md:py-24">
-      <div className="mx-auto w-full max-w-[1152px] px-6 sm:px-8">
-        <h2 className="text-[2.12rem] font-semibold tracking-[-0.05em] text-[#121c2c] sm:text-[2.25rem] md:text-[2.5rem]">
+    <section className="bg-white py-[56px] px-[24px] lg:px-[120px] lg:py-[80px]">
+      <div className="mx-auto w-full max-w-[1120px]   space-y-6 md:space-y-10">
+        <h2 className="lg:px-6 text-[28px] leading-[122%] font-bold tracking-[-0.02em] text-[#121926] lg:text-[40px] lg:leading-[120%] lg:font-semibold">
           Frequently asked Questions
         </h2>
 
-        <div className="mt-12 md:mt-14">
+        <div className="space-y-6 md:space-y-10">
           {faqs.map((faq, index) => (
             <FaqItem
               key={faq.id}
