@@ -7,13 +7,13 @@ import { TeamApplicationFormSection } from "@/components/join/team-application-f
 import { TeamsSection } from "@/components/join/teams-section";
 import { VolunteerSection } from "@/components/join/volunteer-section";
 import { MediaPartnersSection } from "@/components/media-partners-section";
-import { SecondHeader } from "@/components/second-header";
+import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 export default function JoinPage() {
   return (
     <main className="min-h-screen bg-(--color-surface) text-(--color-text)">
-      <SecondHeader />
+      <SiteHeader />
       <Hero />
       <MembershipSection />
       <MembershipFormSection />
