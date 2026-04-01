@@ -43,7 +43,7 @@ function FaqItem({
         ) : (
           <Plus
             aria-hidden="true"
-            className="mt-0.5 h-6 w-6 shrink-0 text-[#697586]"
+            className="mt-0.5 h-6 w-6 shrink-0 text-[#39B54A]"
             strokeWidth={2.2}
           />
         )}
