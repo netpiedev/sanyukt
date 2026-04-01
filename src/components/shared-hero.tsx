@@ -33,7 +33,7 @@ export function SharedHero({
     <section className="mx-auto w-full px-6 pb-6 pt-10 text-center min-[1100px]:px-20 min-[1100px]:py-14">
       <div className="mx-auto flex w-full max-w-[1120px] flex-col items-center gap-6">
         <div className="space-y-4">
-          <h1 className="text-[36px] font-semibold leading-[104%] tracking-[-0.03em] text-[#333840] sm:text-[40px] md:text-[56px]">
+          <h1 className="text-[36px] font-semibold leading-[104%] tracking-[-0.03em] text-[#333840] sm:text-[56px] md:text-[72px]">
             {headingLines.map((line, lineIndex) => {
               const lineKey = line
                 .map(
