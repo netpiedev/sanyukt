@@ -12,14 +12,15 @@ const categories = [
   "Events & Campaigns",
 ];
 
-const blogs = Array(6).fill({
+const blogs = Array.from({ length: 6 }, (_, index) => ({
+  id: `blog-${index + 1}`,
   title: "Title of the blog goes here",
   date: "26 March",
   category: "Youth Leadership",
   excerpt:
     "Running campaigns on menstrual health, period equity, breast cancer, climate action, and youth participation to break taboos.",
   image: "/images/blog/blog.png",
-});
+}));
 
 export function BlogGrid() {
   return (
@@ -51,9 +52,9 @@ export function BlogGrid() {
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
-          {blogs.map((blog, index) => (
+          {blogs.map((blog) => (
             <div
-              key={index}
+              key={blog.id}
               className="flex w-full max-w-[350px] flex-col overflow-hidden rounded-[1.2rem] bg-white p-4"
             >
               <div className="relative aspect-16/10 w-full overflow-hidden rounded-[0.8rem]">

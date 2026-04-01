@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronDown, Heart, Upload } from "lucide-react";
-import { FormEvent, useState } from "react";
+import { type FormEvent, useState } from "react";
 
 const indianStates = [
   "Andaman and Nicobar Islands",

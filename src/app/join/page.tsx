@@ -1,5 +1,4 @@
 import { FaqSection } from "@/components/faq-section";
-import { MediaPartnersSection } from "@/components/media-partners-section";
 import { SupportersTestimonialsSection } from "@/components/home/supporters-testimonials-section";
 import { Hero } from "@/components/join/hero";
 import { MembershipFormSection } from "@/components/join/membership-form-section";
@@ -7,8 +6,9 @@ import { MembershipSection } from "@/components/join/membership-section";
 import { TeamApplicationFormSection } from "@/components/join/team-application-form-section";
 import { TeamsSection } from "@/components/join/teams-section";
 import { VolunteerSection } from "@/components/join/volunteer-section";
-import { SiteFooter } from "@/components/site-footer";
+import { MediaPartnersSection } from "@/components/media-partners-section";
 import { SecondHeader } from "@/components/second-header";
+import { SiteFooter } from "@/components/site-footer";
 
 export default function JoinPage() {
   return (

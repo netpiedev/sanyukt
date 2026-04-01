@@ -1,8 +1,8 @@
 import { BlogDescArticle } from "@/components/blog/blog-desc-article";
 import { FaqSection } from "@/components/faq-section";
 import { MediaPartnersSection } from "@/components/media-partners-section";
-import { SiteFooter } from "@/components/site-footer";
 import { SecondHeader } from "@/components/second-header";
+import { SiteFooter } from "@/components/site-footer";
 
 export default function BlogDescPage() {
   return (

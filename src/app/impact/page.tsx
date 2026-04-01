@@ -1,10 +1,10 @@
 import { FaqSection } from "@/components/faq-section";
-import { MediaPartnersSection } from "@/components/media-partners-section";
 import { Hero } from "@/components/impact/hero";
 import { PastProjectsSection } from "@/components/impact/past-projects-section";
 import { ProjectDescriptions } from "@/components/impact/project-descriptions";
-import { SiteFooter } from "@/components/site-footer";
+import { MediaPartnersSection } from "@/components/media-partners-section";
 import { SecondHeader } from "@/components/second-header";
+import { SiteFooter } from "@/components/site-footer";
 
 export default function ImpactPage() {
   return (

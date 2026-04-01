@@ -67,7 +67,11 @@ export function FeedbackModal({ open, onOpenChange }: FeedbackModalProps) {
           className="absolute top-4 right-4 sm:top-6 sm:right-6 inline-flex h-9 w-9 items-center justify-center rounded-full text-[#121926]/70 transition-colors hover:bg-[#EEF2F6] hover:text-[#121926] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#39B54A]"
           aria-label="Close"
         >
-          <X className="h-6 w-6 sm:h-8 sm:w-8" aria-hidden="true" color="#A1A9B5" />
+          <X
+            className="h-6 w-6 sm:h-8 sm:w-8"
+            aria-hidden="true"
+            color="#A1A9B5"
+          />
         </button>
 
         <h2 className="text-[20px] leading-[28px] sm:text-[24px] sm:leading-[32px] font-bold tracking-[-0.02em]">
@@ -161,7 +165,10 @@ export function FeedbackModal({ open, onOpenChange }: FeedbackModalProps) {
                     ].join(" ")}
                     aria-pressed={isActive}
                   >
-                    <Icon className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
+                    <Icon
+                      className="h-4 w-4 sm:h-5 sm:w-5"
+                      aria-hidden="true"
+                    />
                     <span>{label}</span>
                   </button>
                 );

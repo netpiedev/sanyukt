@@ -1,12 +1,12 @@
 import { Hero } from "@/components/donate/hero";
 import { WatchVideoSection } from "@/components/donate/watch-video-section";
 import { FaqSection } from "@/components/faq-section";
-import { MediaPartnersSection } from "@/components/media-partners-section";
 import { StoriesUpdateSection } from "@/components/home/stories-update-section";
 import { SupportersTestimonialsSection } from "@/components/home/supporters-testimonials-section";
 import { WhySanyuktSection } from "@/components/home/why-sanyukt-section";
-import { SiteFooter } from "@/components/site-footer";
+import { MediaPartnersSection } from "@/components/media-partners-section";
 import { SecondHeader } from "@/components/second-header";
+import { SiteFooter } from "@/components/site-footer";
 
 export default function DonatePage() {
   return (

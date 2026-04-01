@@ -95,4 +95,3 @@ export function MediaPartnersSection() {
     </section>
   );
 }
-

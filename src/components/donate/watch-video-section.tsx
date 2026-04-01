@@ -38,24 +38,39 @@ export function WatchVideoSection() {
                 156,987 views • Nov 25, 2022
               </div>
 
-              <div className="flex items-center gap-4 sm:gap-6 text-[13px] sm:text-sm font-medium text-white overflow-x-auto pb-2 sm:pb-0 hide-scrollbar">
-                <button className="flex items-center gap-2 hover:text-gray-300 transition-colors whitespace-nowrap">
+              <div className="flex items-center gap-4 sm:gap-6 text-[13px] sm:text-sm font-medium text-white overflow-x-auto pb-2 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                <button
+                  type="button"
+                  className="flex items-center gap-2 hover:text-gray-300 transition-colors whitespace-nowrap"
+                >
                   <ThumbsUp className="h-5 w-5" />
                   <span>2.7 K</span>
                 </button>
-                <button className="flex items-center gap-2 hover:text-gray-300 transition-colors whitespace-nowrap">
+                <button
+                  type="button"
+                  className="flex items-center gap-2 hover:text-gray-300 transition-colors whitespace-nowrap"
+                >
                   <ThumbsDown className="h-5 w-5" />
                   <span>124</span>
                 </button>
-                <button className="flex items-center gap-2 hover:text-gray-300 transition-colors whitespace-nowrap">
+                <button
+                  type="button"
+                  className="flex items-center gap-2 hover:text-gray-300 transition-colors whitespace-nowrap"
+                >
                   <Share className="h-5 w-5" />
                   <span>SHARE</span>
                 </button>
-                <button className="flex items-center gap-2 hover:text-gray-300 transition-colors whitespace-nowrap">
+                <button
+                  type="button"
+                  className="flex items-center gap-2 hover:text-gray-300 transition-colors whitespace-nowrap"
+                >
                   <ListPlus className="h-5 w-5" />
                   <span>SAVE</span>
                 </button>
-                <button className="flex items-center justify-center hover:text-gray-300 transition-colors">
+                <button
+                  type="button"
+                  className="flex items-center justify-center hover:text-gray-300 transition-colors"
+                >
                   <MoreHorizontal className="h-5 w-5" />
                 </button>
               </div>

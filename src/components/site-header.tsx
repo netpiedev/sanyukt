@@ -72,9 +72,7 @@ function DropdownCard({
         aria-expanded={isOpen}
         aria-controls={menuId}
         className={`flex items-center gap-1 rounded-[48px] p-2 text-[16px] leading-[24px] font-normal transition-colors duration-200 hover:text-[#121926] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button) ${
-          isOpen
-            ? "text-[#121926]"
-            : "text-[#697586]"
+          isOpen ? "text-[#121926]" : "text-[#697586]"
         }`}
         onMouseEnter={() => onOpen(index)}
       >

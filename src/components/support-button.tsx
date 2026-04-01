@@ -1,11 +1,7 @@
 import { Heart } from "lucide-react";
 import Link from "next/link";
 
-export function SupportButton({
-  href = "/donate",
-}: {
-  href?: string;
-}) {
+export function SupportButton({ href = "/donate" }: { href?: string }) {
   return (
     <Link
       href={href}
