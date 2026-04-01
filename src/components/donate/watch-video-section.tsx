@@ -10,7 +10,7 @@ export function WatchVideoSection() {
   return (
     <section className="w-full bg-[#131722] py-16 md:py-24">
       <div className="mx-auto flex w-full max-w-[1000px] flex-col items-center px-6 md:px-8">
-        <h2 className="mb-8 text-center text-xl font-semibold tracking-tight text-white md:text-2xl">
+        <h2 className="mb-[40px] text-center text-[20px] font-semibold leading-[28px] text-white md:text-[20px]">
           Watch how your support helps?
         </h2>
 
@@ -28,8 +28,8 @@ export function WatchVideoSection() {
           </div>
 
           {/* Video Metadata */}
-          <div className="mt-2 flex flex-col gap-3">
-            <h3 className="text-[17px] sm:text-lg font-medium text-white">
+          <div className="mt-2 flex flex-col gap-2">
+            <h3 className="text-[17px] sm:text-[18px] text-white">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </h3>
 

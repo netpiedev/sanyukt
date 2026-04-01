@@ -1,17 +1,23 @@
 "use client";
 
-import { CreditCard, Landmark, Link as LinkIcon, Smartphone } from "lucide-react";
+import {
+  CreditCard,
+  Landmark,
+  Link as LinkIcon,
+  Smartphone,
+} from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
 export function Hero() {
   const [amount, setAmount] = useState<string>("");
+  const [paymentMethod, setPaymentMethod] = useState<string>("upi");
 
   return (
-    <section className="relative z-0 mx-auto w-full px-6 pb-6 pt-10 min-[1100px]:px-10 min-[1100px]:py-[120px]">
-      <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16 items-stretch">
-        <div className="flex w-full flex-col gap-8 sm:gap-10 lg:h-full">
-          <div className="relative w-full flex-[1] min-h-[200px] sm:min-h-[250px] lg:min-h-0 overflow-hidden rounded-[20px] sm:rounded-[32px]">
+    <section className="relative z-0 w-full px-6 py-10 min-[1100px]:px-10 min-[1100px]:py-[120px]">
+      <div className="mx-auto grid w-full max-w-[1120px] gap-6 lg:grid-cols-[1fr_1.1fr] lg:gap-[40px]">
+        <div className="flex flex-col gap-4 sm:gap-6 lg:h-full">
+          <div className="relative h-[220px] w-full overflow-hidden rounded-[16px] min-[1100px]:h-[280px]">
             <Image
               src="/images/donate-1.png"
               alt="Donate to help communities"
@@ -21,8 +27,8 @@ export function Hero() {
               priority
             />
           </div>
-          <div className="grid flex-[1.4] grid-cols-2 gap-5 sm:gap-6 min-h-[180px] sm:min-h-[220px] lg:min-h-0">
-            <div className="relative w-full h-full overflow-hidden rounded-[20px] sm:rounded-[24px]">
+          <div className="grid grid-cols-2 gap-4 lg:flex-1 lg:min-h-0">
+            <div className="relative w-full aspect-square overflow-hidden rounded-[16px] lg:h-full lg:aspect-auto">
               <Image
                 src="/images/donate-2.png"
                 alt="Support individuals in need"
@@ -32,7 +38,7 @@ export function Hero() {
                 priority
               />
             </div>
-            <div className="relative w-full h-full overflow-hidden rounded-[20px] sm:rounded-[24px]">
+            <div className="relative w-full aspect-square overflow-hidden rounded-[16px] lg:h-full lg:aspect-auto">
               <Image
                 src="/images/donate-3.png"
                 alt="Empower lasting change"
@@ -45,136 +51,145 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col w-full bg-white max-lg:mx-auto max-lg:max-w-2xl px-2 sm:px-0">
-          <h1 className="text-3xl font-semibold tracking-tight text-[#1a1f2e] md:text-[2.4rem] leading-[1.2]">
-            Donate to help
-          </h1>
-          <p className="mt-3 text-[14px] sm:text-[15px] text-gray-400 leading-[1.6]">
-            Your Donation helps us provide essential services, support communities
-            in need, and create lasting positive change. Together, we can make a
-            difference.
-          </p>
+        <div className="flex w-full flex-col gap-4 bg-white px-0 min-[1100px]:px-6">
+          <div>
+            <h1 className="text-[32px] font-semibold leading-[120%] tracking-[-0.04em] text-[#333840] min-[1100px]:text-[40px]">
+              Donate to help
+            </h1>
+            <p className="mt-2 text-[16px] font-normal leading-[24px] text-[#A1A9B5]">
+              Your Donation helps us provide essential services, support
+              communities in need, and create lasting positive change. Together,
+              we can make a difference.
+            </p>
+          </div>
 
           <form
-            className="mt-6 flex flex-col gap-5 border-t border-transparent"
+            className="flex flex-col gap-4"
             onSubmit={(e) => e.preventDefault()}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className="flex flex-col gap-1.5">
-                <label className="text-[13px] font-semibold text-[#1a1f2e]">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter your full name"
-                  className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 text-[13px] text-gray-700 placeholder-gray-400 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#3eb161] transition-all bg-white"
-                />
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-[13px] font-semibold text-[#1a1f2e]">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 text-[13px] text-gray-700 placeholder-gray-400 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#3eb161] transition-all bg-white"
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[13px] font-semibold text-[#1a1f2e]">
-                Leave a message
-              </label>
-              <textarea
-                placeholder="Type something here..."
-                className="w-full min-h-[80px] resize-none rounded-xl border-2 border-gray-200 px-4 py-3 text-[13px] text-gray-700 placeholder-gray-400 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#3eb161] transition-all bg-white"
-              />
-            </div>
-
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[13px] font-semibold text-[#1a1f2e]">
-                Desired Donation
-              </label>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <div className="relative flex-grow">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-medium text-[13px]">
-                    ₹
-                  </span>
+            <div className="flex flex-col gap-4">
+              <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-[16px] font-semibold leading-[24px] text-[#121926]">
+                    Full Name
+                  </label>
                   <input
-                    type="number"
-                    placeholder="Enter Amount"
-                    value={amount}
-                    onChange={(e) => setAmount(e.target.value)}
-                    className="w-full rounded-xl border-2 border-gray-200 pl-8 pr-4 py-3 text-[13px] text-gray-700 placeholder-gray-400 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#3eb161] transition-all bg-white"
+                    type="text"
+                    placeholder="Enter your full name"
+                    className="h-10 w-full rounded-[8px] border-2 border-[#EEF2F6] px-4 py-2 text-[16px] leading-[24px] font-normal text-[#121926] placeholder:text-[#697586] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#3eb161] transition-all bg-white"
                   />
                 </div>
-                <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-1 sm:pb-0 hide-scrollbar">
-                  {[2500, 5000, 7500].map((amt) => (
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-[16px] font-semibold leading-[24px] text-[#121926]">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    className="h-10 w-full rounded-[8px] border-2 border-[#EEF2F6] px-4 py-2 text-[16px] leading-[24px] font-normal text-[#121926] placeholder:text-[#697586] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#3eb161] transition-all bg-white"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <label className="text-[16px] font-semibold leading-[24px] text-[#121926]">
+                  Leave a message
+                </label>
+                <textarea
+                  placeholder="Type something here..."
+                  className="w-full min-h-[80px] resize-none rounded-xl border-2 border-gray-200 px-4 py-3 text-[16px] leading-[24px] font-normal text-[#121926] placeholder:text-[#697586] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#3eb161] transition-all bg-white"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <label className="text-[16px] font-semibold leading-[24px] text-[#121926]">
+                  Desired Donation
+                </label>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="relative flex-grow">
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#697586] text-[16px] leading-[24px] font-normal">
+                      ₹
+                    </span>
+                    <input
+                      type="number"
+                      placeholder="Enter Amount"
+                      value={amount}
+                      onChange={(e) => setAmount(e.target.value)}
+                      className="h-10 w-full rounded-[8px] border-2 border-[#EEF2F6] py-2 pl-8 pr-4 text-[16px] leading-[24px] font-normal text-[#121926] placeholder:text-[#697586] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#3eb161] transition-all bg-white"
+                    />
+                  </div>
+                  <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0 hide-scrollbar">
+                    {[2500, 5000, 7500].map((amt) => (
+                      <button
+                        key={amt}
+                        type="button"
+                        onClick={() => setAmount(amt.toString())}
+                        className="whitespace-nowrap rounded-[8px] bg-[#F8FAFC] p-2 text-[16px] leading-[24px] font-normal text-[#A1A9B5] transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#3eb161]/30"
+                      >
+                        ₹{amt}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <label className="text-[16px] font-semibold leading-[24px] text-[#121926]">
+                  Select Payment Method
+                </label>
+              <div className="mt-1 grid grid-cols-2 gap-2 sm:grid-cols-3 min-[1100px]:grid-cols-5">
+                  {[
+                    {
+                      id: "upi",
+                      label: "UPI Payment",
+                      icon: <Smartphone className="h-6 w-6 text-blue-500" />,
+                    },
+                    {
+                      id: "netbanking",
+                      label: "Net Banking",
+                      icon: <LinkIcon className="h-6 w-6 text-emerald-500" />,
+                    },
+                    {
+                      id: "debit",
+                      label: "Debit Card",
+                      icon: <CreditCard className="h-6 w-6 text-orange-500" />,
+                    },
+                    {
+                      id: "credit",
+                      label: "Credit Card",
+                      icon: <CreditCard className="h-6 w-6 text-blue-600" />,
+                    },
+                    {
+                      id: "bank",
+                      label: "Bank Transfer",
+                      icon: <Landmark className="h-6 w-6 text-cyan-500" />,
+                    },
+                  ].map((method) => (
                     <button
-                      key={amt}
+                      key={method.id}
                       type="button"
-                      onClick={() => setAmount(amt.toString())}
-                      className="whitespace-nowrap rounded-xl bg-[#f8f9fb] px-4 sm:px-5 py-3 text-[13px] font-medium text-gray-400 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#3eb161]/30"
+                      onClick={() => setPaymentMethod(method.id)}
+                      className={`group flex h-[72px] flex-col items-start justify-between rounded-[8px] border p-2 transition-all focus:outline-none ${
+                        paymentMethod === method.id
+                          ? "border-[#CDD5DF] bg-[#F8FAFC]"
+                          : "border-[#F8FAFC] bg-white"
+                      }`}
                     >
-                      ₹{amt}
+                      <div className="flex h-6 w-6 items-center justify-center">
+                        {method.icon}
+                      </div>
+                      <span className="text-left text-[12px] font-normal leading-[16px] text-[#121926]">
+                        {method.label}
+                      </span>
                     </button>
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[13px] font-semibold text-[#1a1f2e]">
-                Select Payment Method
-              </label>
-              <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 mt-1">
-                {[
-                  {
-                    id: "upi",
-                    label: "UPI Payment",
-                    icon: <Smartphone className="h-4 w-4 text-blue-500" />,
-                  },
-                  {
-                    id: "netbanking",
-                    label: "Net Banking",
-                    icon: <LinkIcon className="h-4 w-4 text-emerald-500" />,
-                  },
-                  {
-                    id: "debit",
-                    label: "Debit Card",
-                    icon: <CreditCard className="h-4 w-4 text-orange-500" />,
-                  },
-                  {
-                    id: "credit",
-                    label: "Credit Card",
-                    icon: <CreditCard className="h-4 w-4 text-blue-600" />,
-                  },
-                  {
-                    id: "bank",
-                    label: "Bank Transfer",
-                    icon: <Landmark className="h-4 w-4 text-cyan-500" />,
-                  },
-                ].map((method) => (
-                  <button
-                    key={method.id}
-                    type="button"
-                    className="group flex flex-col items-center justify-center gap-1.5 rounded-xl border border-gray-200 bg-white p-2.5 hover:border-gray-300 hover:shadow-sm focus:border-[#3eb161] focus:outline-none focus:ring-1 focus:ring-[#3eb161] transition-all"
-                  >
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white transition-colors">
-                      {method.icon}
-                    </div>
-                    <span className="text-[9px] sm:text-[10px] font-medium text-gray-500 text-center leading-tight">
-                      {method.label}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
             <button
               type="submit"
-              className="mt-2 w-full rounded-[14px] bg-[#34c759] py-3 sm:py-3.5 text-[15px] font-semibold text-white shadow-lg shadow-green-500/20 transition-transform active:scale-[0.98] hover:bg-[#30b551] flex items-center justify-center gap-2"
+              className="inline-flex w-full items-center justify-center gap-1 rounded-[48px] bg-[#39B54A] px-4 py-2 text-[16px] leading-[24px] font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#39B54A]"
             >
               Donate now
               <svg
