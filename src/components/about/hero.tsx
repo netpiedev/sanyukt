@@ -11,58 +11,60 @@ const aboutParagraphs = [
   "Today, Sanyukt stands as a symbol of youth power in Odisha, continuing to grow and expand its footprint. Every initiative we undertake, whether in education, healthcare, sustainability, or community empowerment, echoes our core belief: when youth unite with purpose, they become the strongest force of change.",
 ];
 
-export function HeroSection() {
+export function Hero() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section className="mx-auto w-full max-w-[960px] px-6 pb-14 pt-10 text-center sm:px-8 md:pb-18 md:pt-14">
-      <div className="mx-auto max-w-[60rem]">
-        <h1 className="text-[2.15rem] font-semibold leading-[1] tracking-[-0.055em] text-[#1a2434] sm:text-[3rem] md:text-[3.75rem]">
-          <span>About </span>
-          <span className="bg-[linear-gradient(90deg,#35b86b_0%,#2eb8b9_42%,#2a97e8_100%)] bg-clip-text text-transparent">
-            us
-          </span>
-        </h1>
+    <section className="mx-auto w-full px-6 pb-6 pt-10 text-center min-[1100px]:px-20 min-[1100px]:py-14">
+      <div className="mx-auto flex w-full max-w-[1120px] flex-col items-center gap-6">
+        <div className="space-y-4">
+          <h1 className="text-[2.15rem] font-semibold leading-[1] tracking-[-0.055em] text-[#1a2434] sm:text-[3rem] md:text-[3.75rem]">
+            <span>About </span>
+            <span className="bg-[linear-gradient(90deg,#35b86b_0%,#2eb8b9_42%,#2a97e8_100%)] bg-clip-text text-transparent">
+              us
+            </span>
+          </h1>
 
-        <div className="mx-auto mt-7 max-w-[60rem] text-[0.80rem] leading-[1.72] text-[#697586] sm:text-[1rem] md:text-[1.02rem]">
-          <p>
-            {aboutParagraphs[0]}{" "}
-            {!expanded ? (
-              <button
-                type="button"
-                className="inline font-semibold text-[#121c2c] transition-colors duration-200 hover:text-[var(--color-button)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
-                onClick={() => setExpanded(true)}
-              >
-                Read more
-              </button>
-            ) : null}
-          </p>
-
-          {expanded ? (
-            <>
-              <p className="mt-4">{aboutParagraphs[1]}</p>
-              <p className="mt-4">
-                {aboutParagraphs[2]}{" "}
+          <div className="mx-auto max-w-[500px] text-[0.80rem] leading-[1.72] text-[#697586] sm:text-[1rem] md:text-[1.02rem] min-[1100px]:max-w-[960px]">
+            <p>
+              {aboutParagraphs[0]}{" "}
+              {!expanded ? (
                 <button
                   type="button"
                   className="inline font-semibold text-[#121c2c] transition-colors duration-200 hover:text-[var(--color-button)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
-                  onClick={() => setExpanded(false)}
+                  onClick={() => setExpanded(true)}
                 >
-                  Read less
+                  Read more
                 </button>
-              </p>
-            </>
-          ) : null}
+              ) : null}
+            </p>
+
+            {expanded ? (
+              <>
+                <p className="mt-4">{aboutParagraphs[1]}</p>
+                <p className="mt-4">
+                  {aboutParagraphs[2]}{" "}
+                  <button
+                    type="button"
+                    className="inline font-semibold text-[#121c2c] transition-colors duration-200 hover:text-[var(--color-button)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
+                    onClick={() => setExpanded(false)}
+                  >
+                    Read less
+                  </button>
+                </p>
+              </>
+            ) : null}
+          </div>
         </div>
 
-        <div className="mt-8 flex flex-col items-center justify-center gap-2 sm:flex-row">
+        <div className="flex flex-col items-center justify-center gap-2 sm:flex-row">
           <SupportButton />
           <LearnMoreLink href="/donate" />
         </div>
       </div>
 
-      <div className="relative mx-auto mt-10 w-full max-w-[1071px] overflow-hidden rounded-[1.9rem] bg-[#eef2f6] md:mt-12 md:rounded-[2.6rem]">
-        <div className="relative aspect-[5/4] w-full sm:aspect-[16/11] md:h-[520px] md:aspect-auto">
+      <div className="relative mx-auto mt-6 w-full max-w-[960px] overflow-hidden rounded-[40px] bg-[#eef2f6] min-[1100px]:mt-10 min-[1100px]:h-[520px]">
+        <div className="relative aspect-5/4 w-full sm:aspect-16/11 min-[1100px]:h-full min-[1100px]:aspect-auto">
           <Image
             src="/images/about-hero.png"
             alt="Sanyukt team members together outdoors"

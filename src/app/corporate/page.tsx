@@ -1,5 +1,5 @@
 import { BenefitsSection } from "@/components/corporate/benefits-section";
-import { CorporateHeroSection } from "@/components/corporate/corporate-hero-section";
+import { Hero } from "@/components/corporate/hero";
 import { CorporateShowcaseSection } from "@/components/corporate/corporate-showcase-section";
 import { PartnerWithUsSection } from "@/components/corporate/partner-with-us-section";
 import { PartnersSpotlightSection } from "@/components/corporate/partners-spotlight-section";
@@ -12,7 +12,7 @@ export default function CorporatePage() {
   return (
     <main className="min-h-screen bg-(--color-surface) text-(--color-text)">
       <SecondHeader />
-      <CorporateHeroSection />
+      <Hero />
       <BenefitsSection />
       <PartnersSpotlightSection />
       <CorporateShowcaseSection />

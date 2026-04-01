@@ -38,7 +38,7 @@ const impactStats = [
 
 export function HeroImagePlaceholder() {
   return (
-    <div className="overflow-hidden rounded-4xl border border-[#EEF2F6] bg-white md:rounded-[2.6rem]">
+    <div className="overflow-hidden rounded-[40px] border border-[#EEF2F6] bg-white">
       <div className="relative h-72 overflow-hidden bg-[#d8dde3] sm:h-88 md:h-128">
         <Image
           src="/images/impact/hero.png"

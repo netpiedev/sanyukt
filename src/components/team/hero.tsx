@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export function HeroSection() {
+export function Hero() {
   return (
-    <section className="mx-auto w-full max-w-[960px] px-6 pb-14 pt-10 sm:px-0 sm:pb-18 md:pt-14">
-      <div className="px-0 text-center sm:px-8">
+    <section className="mx-auto w-full px-6 pb-6 pt-10 text-center min-[1100px]:px-20 min-[1100px]:py-14">
+      <div className="mx-auto w-full max-w-[1120px] space-y-4">
         <h1 className="text-[36px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#333840] sm:text-[44px] md:text-[56px]">
           Meet the Youth Driving
           <br />
@@ -12,7 +12,7 @@ export function HeroSection() {
           </span>
         </h1>
 
-        <div className="mx-auto mt-4 max-w-[460px] text-[14px] leading-[24px] text-[#697586] sm:text-[16px]">
+        <div className="mx-auto max-w-[460px] text-[14px] leading-[24px] text-[#697586] sm:text-[16px] min-[1100px]:max-w-[480px]">
           <p>
             Our passionate team of volunteers, leaders, and interns work
             together to empower communities, uplift women, protect the
@@ -21,8 +21,8 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="relative mx-auto mt-10 w-full overflow-hidden rounded-[1.9rem] bg-[#eef2f6] md:mt-12 md:rounded-[2.6rem]">
-        <div className="relative aspect-5/4 w-full sm:aspect-16/11 md:h-[520px] md:aspect-auto">
+      <div className="relative mx-auto mt-6 w-full max-w-[960px] overflow-hidden rounded-[40px] bg-[#eef2f6] min-[1100px]:mt-10 min-[1100px]:h-[520px]">
+        <div className="relative aspect-5/4 w-full sm:aspect-16/11 min-[1100px]:h-full min-[1100px]:aspect-auto">
           <Image
             src="/images/team.png"
             alt="Sanyukt team members together outdoors"

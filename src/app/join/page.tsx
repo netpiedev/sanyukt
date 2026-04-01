@@ -1,7 +1,7 @@
 import { FaqSection } from "@/components/faq-section";
 import { MediaPartnersSection } from "@/components/media-partners-section";
 import { SupportersTestimonialsSection } from "@/components/home/supporters-testimonials-section";
-import { HeroSection } from "@/components/join/hero-section";
+import { Hero } from "@/components/join/hero";
 import { MembershipFormSection } from "@/components/join/membership-form-section";
 import { MembershipSection } from "@/components/join/membership-section";
 import { TeamApplicationFormSection } from "@/components/join/team-application-form-section";
@@ -14,7 +14,7 @@ export default function JoinPage() {
   return (
     <main className="min-h-screen bg-(--color-surface) text-(--color-text)">
       <SecondHeader />
-      <HeroSection />
+      <Hero />
       <MembershipSection />
       <MembershipFormSection />
       <VolunteerSection />

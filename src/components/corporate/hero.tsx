@@ -8,20 +8,18 @@ export function Hero() {
       <div className="mx-auto flex w-full max-w-[1120px] flex-col items-center gap-6">
         <div className="space-y-4">
           <h1 className="text-[2rem] font-semibold leading-[1.12] tracking-[-0.04em] text-[#1a2434] sm:text-[2.65rem] md:text-[3.25rem]">
-            Kickstart your
-            <br />
+            Together, we can build{" "}
             <span className="inline-block bg-linear-to-r from-[#39B54A] to-[#25AAE1] bg-clip-text text-transparent ">
-              journey with Sanyukt
+              stronger communities.
             </span>
           </h1>
 
-          <div className="mx-auto max-w-[520px] text-[0.9rem] leading-[1.72] text-[#697586] sm:text-[1rem] min-[1100px]:max-w-[480px]">
+          <div className="mx-auto max-w-[500px] text-[0.9rem] leading-[1.72] text-[#697586] sm:text-[1rem] min-[1100px]:max-w-[480px]">
             <p>
-              Step into a journey where learning meets purpose. At Sanyukt,
-              you’ll{" "}
+              At Sanyukt, corporate partnerships go beyond CSR—they create{" "}
               <span className="font-semibold text-[#1a2434]">
-                sharpen your skills, explore volunteering, and contribute to
-                initiatives that truly create impact.
+                lasting impact, empower communities, and drive meaningful change
+                across Odisha.
               </span>
             </p>
           </div>
@@ -36,7 +34,7 @@ export function Hero() {
       <div className="relative mx-auto mt-6 w-full max-w-[960px] overflow-hidden rounded-[40px] bg-[#eef2f6] min-[1100px]:mt-10 min-[1100px]:h-[520px]">
         <div className="relative aspect-5/4 w-full sm:aspect-16/11 min-[1100px]:h-full min-[1100px]:aspect-auto">
           <Image
-            src="/images/intern/hero.png"
+            src="/images/corporate/hero.png"
             alt="Corporate partners and Sanyukt team with certificates"
             fill
             className="object-cover"

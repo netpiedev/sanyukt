@@ -3,7 +3,7 @@ import { MediaPartnersSection } from "@/components/media-partners-section";
 import { AboutInternshipSection } from "@/components/intern/about-internship";
 import { BackgroundVerificationSection } from "@/components/intern/background-verification-section";
 import { FormSection } from "@/components/intern/form";
-import { InternHeroSection } from "@/components/intern/hero";
+import { Hero } from "@/components/intern/hero";
 import { StarInternsSection } from "@/components/intern/star-interns-section";
 import { UniversitiesCollegesPartnershipSection } from "@/components/intern/universities-colleges-partnership-section";
 import { UniversitiesJoinedSection } from "@/components/intern/universities-joined-section";
@@ -14,7 +14,7 @@ export default function InternPage() {
   return (
     <main className="min-h-screen bg-(--color-surface) text-(--color-text)">
       <SecondHeader />
-      <InternHeroSection />
+      <Hero />
       <UniversitiesJoinedSection />
       <AboutInternshipSection />
       <UniversitiesCollegesPartnershipSection />

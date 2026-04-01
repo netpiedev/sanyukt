@@ -38,8 +38,8 @@ const impactStats = [
 
 export function HeroImagePlaceholder() {
   return (
-    <div className="overflow-hidden rounded-4xl border border-[#dfe6ee] bg-white md:rounded-[2.6rem]">
-      <div className="relative h-72 overflow-hidden bg-[#d8dde3] sm:h-88 md:h-128">
+    <div className="overflow-hidden rounded-[40px] border border-[#dfe6ee] bg-white">
+      <div className="relative aspect-5/4 w-full overflow-hidden bg-[#d8dde3] md:w-[960px] md:aspect-[960/520]">
         <Image
           src="/images/hero.png"
           alt="Community gathering"

@@ -1,7 +1,7 @@
 import { FaqSection } from "@/components/faq-section";
 import { BuildingChangeSection } from "@/components/home/building-change-section";
 import { DonationImpactSection } from "@/components/home/donation-impact-section";
-import { HomeHero } from "@/components/home/home-hero";
+import { Hero } from "@/components/home/hero";
 import { MediaPartnersSection } from "@/components/media-partners-section";
 import { StoriesUpdateSection } from "@/components/home/stories-update-section";
 import { SupportersTestimonialsSection } from "@/components/home/supporters-testimonials-section";
@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-(--color-surface) text-(--color-text)">
       <SiteHeader />
-      <HomeHero />
+      <Hero />
       <BuildingChangeSection />
       <WhatWeDoSection />
       <DonationImpactSection />

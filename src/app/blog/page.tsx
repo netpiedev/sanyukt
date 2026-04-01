@@ -1,5 +1,5 @@
 import { BlogGrid } from "@/components/blog/blog-grid";
-import { HeroSection } from "@/components/blog/hero-section";
+import { Hero } from "@/components/blog/hero";
 import { TeamSpotlightSection } from "@/components/blog/team-spotlight-section";
 import { FaqSection } from "@/components/faq-section";
 import { MediaPartnersSection } from "@/components/media-partners-section";
@@ -10,7 +10,7 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen bg-(--color-surface) text-(--color-text)">
       <SecondHeader />
-      <HeroSection />
+      <Hero />
       <BlogGrid />
       <TeamSpotlightSection />
       <MediaPartnersSection />

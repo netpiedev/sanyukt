@@ -1,5 +1,5 @@
 import { FounderSection } from "@/components/about/founder-section";
-import { HeroSection } from "@/components/about/hero-section";
+import { Hero } from "@/components/about/hero";
 import { TimelineSection } from "@/components/about/timeline-section";
 import { ValuesSection } from "@/components/about/values-section";
 import { WhatWeDoSection } from "@/components/about/what-we-do-section";
@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-(--color-surface) text-(--color-text)">
       <SiteHeader />
-      <HeroSection />
+      <Hero />
       <FounderSection />
       <WatchVideoSection />
       <ValuesSection />
