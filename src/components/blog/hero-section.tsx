@@ -1,7 +1,6 @@
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import { SupportCauseButton } from "@/components/home/support-cause-button";
+import { LearnMoreLink } from "@/components/learn-more-link";
+import { SupportButton } from "@/components/support-button";
 
 export function HeroSection() {
   return (
@@ -21,19 +20,9 @@ export function HeroSection() {
           </p>
         </div>
 
-        <div className="mt-8 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
-          <SupportCauseButton className="min-w-54 px-3 py-2.5 text-[0.95rem] font-semibold" />
-          <Link
-            href="/about"
-            className="inline-flex items-center justify-center gap-2 px-3 py-2 text-[0.95rem] font-semibold text-[#1f2937] transition-colors duration-200 hover:text-(--color-button) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
-          >
-            <span>Learn more</span>
-            <ArrowUpRight
-              aria-hidden="true"
-              className="h-4 w-4"
-              strokeWidth={2}
-            />
-          </Link>
+        <div className="mt-8 flex flex-col items-center justify-center gap-2 sm:flex-row">
+          <SupportButton />
+          <LearnMoreLink href="/about" />
         </div>
       </div>
 

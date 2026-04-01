@@ -1,10 +1,9 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
-import { SupportCauseButton } from "@/components/home/support-cause-button";
+import { LearnMoreLink } from "@/components/learn-more-link";
+import { SupportButton } from "@/components/support-button";
 
 const aboutParagraphs = [
   "Founded in 2020, by Sk. Sahil, Sanyukt Organisation is Odisha's first fully youth-led NGO, driven by the belief that young people hold the power to create meaningful social change. What began as a small idea by college students has today evolved into a dynamic network of 2,000+ members and volunteers, actively working across 16+ districts of Odisha and impacting the lives of over 5 crore people through dedicated initiatives.",
@@ -56,19 +55,9 @@ export function HeroSection() {
           ) : null}
         </div>
 
-        <div className="mt-8 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
-          <SupportCauseButton className="min-w-[13.5rem] px-3 py-2.5 text-[0.95rem] font-semibold" />
-          <Link
-            href="/donate"
-            className="inline-flex items-center justify-center gap-2 px-3 py-2 text-[0.95rem] font-medium text-[#1f2937] transition-colors duration-200 hover:text-[var(--color-button)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-button)]"
-          >
-            <span>Learn more</span>
-            <ArrowUpRight
-              aria-hidden="true"
-              className="h-4 w-4"
-              strokeWidth={2}
-            />
-          </Link>
+        <div className="mt-8 flex flex-col items-center justify-center gap-2 sm:flex-row">
+          <SupportButton />
+          <LearnMoreLink href="/donate" />
         </div>
       </div>
 

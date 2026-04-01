@@ -15,7 +15,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FeedbackModal } from "@/components/feedback-modal";
-import { SupportCauseButton } from "@/components/home/support-cause-button";
+import { SupportButton } from "@/components/support-button";
 
 const lexendDeca = Lexend_Deca({
   subsets: ["latin"],
@@ -122,11 +122,11 @@ export function SiteFooter() {
             </p>
 
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:w-full lg:max-w-lg lg:justify-start">
-              <SupportCauseButton className="w-full sm:w-auto sm:min-w-40 px-[20px] py-[12px] text-[16px] font-bold leading-[24px] md:py-[8px] md:px-[16px]" />
+              <SupportButton />
               <button
                 type="button"
                 onClick={() => setIsFeedbackOpen(true)}
-                className="inline-flex w-full sm:w-auto sm:min-w-40 cursor-pointer items-center justify-center gap-1 rounded-[48px] border border-[#CDD5DF] bg-white px-[16px] py-[8px] text-[16px] leading-[24px] font-medium text-[#121926] transition-colors duration-200 hover:border-(--color-button) hover:text-(--color-button) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
+                className="inline-flex h-10 w-[240px] cursor-pointer items-center justify-center gap-1 rounded-[48px] border border-[#CDD5DF] bg-white px-[16px] py-[8px] text-[16px] leading-[24px] font-medium text-[#121926] transition-colors duration-200 hover:border-(--color-button) hover:text-(--color-button) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button) sm:w-auto sm:min-w-40"
               >
                 <span>Share Feedback</span>
                 <MessageSquareText
@@ -171,7 +171,7 @@ export function SiteFooter() {
                     className="hidden h-4 w-4 shrink-0 text-[#7e8ba0] lg:block"
                     strokeWidth={2}
                   />
-                  <span className="text-[14px] leading-[22px] md:leading-[22px]  tracking-[-0.01em] text-[#A1A9B5] md:text-[#697586]">
+                  <span className="text-[14px] leading-[22px] md:leading-[22px]  tracking-[-0.01em] text-[#27AAE1] md:text-[#697586]">
                     info@sanyuktorg.com
                   </span>
                 </p>
