@@ -17,7 +17,7 @@ function HeartIcon() {
   return (
     <Heart
       aria-hidden="true"
-      className="h-3.5 w-3.5 fill-current"
+      className="h-4 w-4 fill-current"
       strokeWidth={2}
     />
   );
@@ -25,9 +25,9 @@ function HeartIcon() {
 
 function MenuIcon({ open = false }: { open?: boolean }) {
   return open ? (
-    <X aria-hidden="true" className="h-6 w-6" strokeWidth={2.2} />
+    <X aria-hidden="true" className="h-7 w-7" strokeWidth={2.2} />
   ) : (
-    <Menu aria-hidden="true" className="h-6 w-6" strokeWidth={2.2} />
+    <Menu aria-hidden="true" className="h-7 w-7" strokeWidth={2.2} />
   );
 }
 
@@ -35,7 +35,7 @@ function ArrowRight() {
   return (
     <ChevronRight
       aria-hidden="true"
-      className="h-4 w-4 text-(--color-muted) transition-transform duration-200 group-hover:translate-x-0.5"
+      className="h-4 w-4 text-[#A1A9B5]"
       strokeWidth={1.8}
     />
   );
@@ -58,7 +58,7 @@ function DropdownCard({
     return (
       <Link
         href={item.href ?? "#"}
-        className="rounded-full px-3 py-2 text-[0.96rem] font-medium text-(--color-muted) transition-colors duration-200 hover:text-(--color-text) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
+        className="rounded-[48px] p-2 text-[16px] leading-[24px] font-normal text-[#697586] transition-colors duration-200 hover:text-[#121926] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
       >
         {item.label}
       </Link>
@@ -71,17 +71,17 @@ function DropdownCard({
         href={item.href ?? "#"}
         aria-expanded={isOpen}
         aria-controls={menuId}
-        className={`flex items-center gap-1.5 rounded-full px-3 py-2 text-[0.96rem] font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button) ${
+        className={`flex items-center gap-1 rounded-[48px] p-2 text-[16px] leading-[24px] font-normal transition-colors duration-200 hover:text-[#121926] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button) ${
           isOpen
-            ? "bg-(--color-soft-green) text-(--color-text)"
-            : "text-(--color-muted) hover:text-(--color-text)"
+            ? "text-[#121926]"
+            : "text-[#697586]"
         }`}
         onMouseEnter={() => onOpen(index)}
       >
         <span>{item.label}</span>
         <ChevronDown
           aria-hidden="true"
-          className={`h-3.5 w-3.5 transition-transform duration-200 ${
+          className={`h-4 w-4 text-[#697586] transition-transform duration-200 ${
             isOpen ? "rotate-180" : ""
           }`}
           strokeWidth={1.8}
@@ -92,25 +92,31 @@ function DropdownCard({
         id={menuId}
         role="menu"
         aria-label={item.label}
-        className={`absolute left-0 top-[calc(100%+1.2rem)] z-50 w-[min(19rem,30vw)] origin-top-left rounded-[1.1rem] border border-black/5 bg-(--color-surface) p-2 shadow-[0_22px_45px_rgba(16,44,25,0.18)] transition-all duration-200 ${
+        className={`absolute left-0 top-full z-50 w-[280px] origin-top-left rounded-[8px] bg-(--color-surface) shadow-[0_24px_40px_rgba(0,0,0,0.08)] transition-all duration-200 ${
           isOpen
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-2 opacity-0"
         }`}
       >
-        <ul className="overflow-hidden rounded-[0.9rem]">
-          {item.children.map((child) => (
+        <ul className="overflow-hidden rounded-[8px]">
+          {item.children.map((child, childIndex) => (
             <li
               key={child.label}
-              className="border-b border-(--color-line) last:border-b-0"
+              className={`border-b border-[#EEF2F6] last:border-b-0 ${
+                childIndex === 0 ? "group hover:border-white" : ""
+              }`}
             >
               <Link
                 href={child.href}
                 role="menuitem"
-                className="group flex items-center justify-between gap-4 px-4 py-3 text-sm font-medium text-(--color-text) transition-colors duration-200 hover:bg-[#f8fbf6] focus-visible:outline-none focus-visible:bg-[#f8fbf6]"
+                className="flex items-center justify-between gap-4 px-4 py-2 text-[13px] leading-[20px] font-normal text-[#333840] transition-colors duration-200 hover:bg-[#F8FAFC] focus-visible:outline-none focus-visible:bg-[#F8FAFC]"
               >
                 <span>{child.label}</span>
-                <ArrowRight />
+                {childIndex === 0 ? (
+                  <span className="opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                    <ArrowRight />
+                  </span>
+                ) : null}
               </Link>
             </li>
           ))}
@@ -172,16 +178,19 @@ export function SiteHeader() {
   };
 
   return (
-    <header ref={headerRef} className="relative z-50 bg-(--color-surface)">
-      <div className="mx-auto max-w-[1920px] px-6 py-7 sm:px-8 lg:px-10">
+    <header
+      ref={headerRef}
+      className="relative z-50 bg-(--color-surface) min-[1100px]:h-[104px]"
+    >
+      <div className="mx-auto max-w-[1920px] p-6 min-[1100px]:h-full min-[1100px]:px-20 min-[1100px]:py-8">
         <nav
           aria-label="Primary navigation"
-          className="flex items-center justify-between gap-4"
+          className="flex items-center justify-between gap-[40px] min-[1100px]:h-full"
         >
           <BrandMark />
 
           <div className="hidden min-[1100px]:flex min-[1100px]:flex-1 min-[1100px]:items-center min-[1100px]:justify-between min-[1100px]:gap-8">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               {primaryNav.map((item, index) => (
                 <DropdownCard
                   key={item.label}
@@ -193,17 +202,17 @@ export function SiteHeader() {
               ))}
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               {actionNav.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`inline-flex items-center justify-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button) ${
+                  className={`inline-flex items-center justify-center rounded-[48px] border transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button) ${
                     item.variant === "solid"
-                      ? "border-(--color-button) bg-(--color-button) text-white hover:-translate-y-0.5 hover:brightness-105"
+                      ? "h-10 gap-1 border-(--color-button) bg-(--color-button) px-4 py-2 text-[16px] leading-[24px] font-medium text-white hover:-translate-y-0.5 hover:brightness-105"
                       : item.variant === "outline"
-                        ? "border-(--color-border-strong) bg-white text-(--color-text) hover:border-(--color-button) hover:text-(--color-button)"
-                        : "border-transparent bg-transparent px-2 text-(--color-muted) hover:text-(--color-text)"
+                        ? "h-10 gap-1 border-[#CDD5DF] bg-white px-4 py-2 text-[16px] leading-[24px] font-medium text-[#333840]"
+                        : "group h-10 gap-1 border-transparent bg-transparent px-2 text-[16px] leading-[24px] font-normal text-[#697586] hover:text-[#121926]"
                   }`}
                 >
                   {item.variant === "ghost" ? (
@@ -211,7 +220,7 @@ export function SiteHeader() {
                       <span>Talk to us</span>
                       <CircleHelp
                         aria-hidden="true"
-                        className="h-4 w-4 text-(--color-muted)"
+                        className="h-4 w-4 text-[#697586] group-hover:text-[#121926]"
                         strokeWidth={2}
                       />
                     </>
@@ -226,10 +235,10 @@ export function SiteHeader() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 min-[1100px]:hidden">
+          <div className="flex items-center gap-2 min-[1100px]:hidden">
             <Link
               href="/donate"
-              className="inline-flex items-center justify-center rounded-full bg-[#39B54A] px-5 py-3 text-sm font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
+              className="inline-flex h-8 items-center justify-center rounded-[48px] bg-[#39B54A] px-3 text-[14px] leading-[20px] font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
             >
               Donate now
             </Link>
@@ -237,7 +246,7 @@ export function SiteHeader() {
               type="button"
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full text-(--color-muted) transition-colors duration-200 hover:bg-(--color-soft-green) hover:text-(--color-text) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
+              className="inline-flex items-center justify-center text-[#697586] transition-colors duration-200 hover:bg-(--color-soft-green) hover:text-[#333840] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-button)"
               onClick={() => setMobileOpen((current) => !current)}
             >
               <span className="sr-only">Toggle navigation</span>

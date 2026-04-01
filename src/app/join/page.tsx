@@ -8,12 +8,12 @@ import { TeamApplicationFormSection } from "@/components/join/team-application-f
 import { TeamsSection } from "@/components/join/teams-section";
 import { VolunteerSection } from "@/components/join/volunteer-section";
 import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
+import { SecondHeader } from "@/components/second-header";
 
 export default function JoinPage() {
   return (
     <main className="min-h-screen bg-(--color-surface) text-(--color-text)">
-      <SiteHeader />
+      <SecondHeader />
       <HeroSection />
       <MembershipSection />
       <MembershipFormSection />

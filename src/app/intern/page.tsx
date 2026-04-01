@@ -8,12 +8,12 @@ import { StarInternsSection } from "@/components/intern/star-interns-section";
 import { UniversitiesCollegesPartnershipSection } from "@/components/intern/universities-colleges-partnership-section";
 import { UniversitiesJoinedSection } from "@/components/intern/universities-joined-section";
 import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
+import { SecondHeader } from "@/components/second-header";
 
 export default function InternPage() {
   return (
     <main className="min-h-screen bg-(--color-surface) text-(--color-text)">
-      <SiteHeader />
+      <SecondHeader />
       <InternHeroSection />
       <UniversitiesJoinedSection />
       <AboutInternshipSection />

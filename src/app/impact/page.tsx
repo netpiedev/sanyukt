@@ -4,12 +4,12 @@ import { HeroSection } from "@/components/impact/hero-section";
 import { PastProjectsSection } from "@/components/impact/past-projects-section";
 import { ProjectDescriptions } from "@/components/impact/project-descriptions";
 import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
+import { SecondHeader } from "@/components/second-header";
 
 export default function ImpactPage() {
   return (
     <main className="min-h-screen bg-(--color-surface) text-(--color-text)">
-      <SiteHeader />
+      <SecondHeader />
       <HeroSection />
       <PastProjectsSection />
       <ProjectDescriptions />
