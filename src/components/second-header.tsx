@@ -35,6 +35,7 @@ function MenuIcon({ open = false }: { open?: boolean }) {
 
 export function SecondHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -47,8 +48,22 @@ export function SecondHeader() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 0);
+    }
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="relative z-50 bg-(--color-surface) min-[1100px]:h-[104px]">
+    <header
+      className={`sticky top-0 z-50 bg-(--color-surface) transition-shadow duration-200 min-[1100px]:h-[104px] ${
+        scrolled ? "shadow-[0_2px_10px_rgba(0,0,0,0.06)]" : "shadow-none"
+      }`}
+    >
       <div className="mx-auto max-w-[1920px] p-6 min-[1100px]:h-full min-[1100px]:px-20 min-[1100px]:py-8">
         <nav
           aria-label="Primary navigation"
