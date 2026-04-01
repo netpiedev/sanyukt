@@ -20,7 +20,7 @@ export function Hero() {
         <div className="space-y-4">
           <h1 className="text-[2.15rem] font-semibold leading-[1] tracking-[-0.055em] text-[#1a2434] sm:text-[3rem] md:text-[3.75rem]">
             <span>About </span>
-            <span className="bg-[linear-gradient(90deg,#35b86b_0%,#2eb8b9_42%,#2a97e8_100%)] bg-clip-text text-transparent">
+            <span className="bg-[linear-gradient(90deg,#39B54A_0%,#25AAE1_69.23%)] bg-clip-text text-transparent">
               us
             </span>
           </h1>
