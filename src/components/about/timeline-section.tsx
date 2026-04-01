@@ -50,7 +50,7 @@ const timelineData = [
 
 export function TimelineSection() {
   return (
-    <section className="w-full bg-[#f8fbfd] py-16 md:py-24">
+    <section id="our-impact" className="w-full bg-[#f8fbfd] py-16 md:py-24">
       <div className="mx-auto w-full max-w-[1072px] px-6 lg:px-8">
         <h2 className="mb-4 text-center sm:text-left text-[28px] sm:text-3xl font-bold tracking-tight bg-[linear-gradient(90deg,#35b86b_0%,#2eb8b9_42%,#2a97e8_100%)] bg-clip-text text-transparent md:text-4xl">
           Timeline & Milestones

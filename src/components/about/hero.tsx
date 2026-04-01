@@ -15,7 +15,10 @@ export function Hero() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section className="mx-auto w-full px-6 pb-6 pt-10 text-center min-[1100px]:px-20 min-[1100px]:py-14">
+    <section
+      id="who-we-are"
+      className="mx-auto w-full px-6 pb-6 pt-10 text-center min-[1100px]:px-20 min-[1100px]:py-14"
+    >
       <div className="mx-auto flex w-full max-w-[1120px] flex-col items-center gap-6">
         <div className="space-y-4">
           <h1 className="text-[2.15rem] font-semibold leading-[1] tracking-[-0.055em] text-[#1a2434] sm:text-[3rem] md:text-[3.75rem]">

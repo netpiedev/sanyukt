@@ -166,7 +166,7 @@ function CompactCard({ item }: { item: CardItem }) {
 
 export function WhatWeDoSection() {
   return (
-    <section className="w-full bg-white py-18 md:py-24">
+    <section id="what-we-do" className="w-full bg-white py-18 md:py-24">
       <div className="mx-auto w-full max-w-[1072px] px-6 sm:px-8">
         <h2 className="text-center text-[2.35rem] font-semibold leading-none tracking-[-0.055em] text-[#333840] sm:text-[3rem]">
           What we do?

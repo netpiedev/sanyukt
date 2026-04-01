@@ -18,7 +18,7 @@ export function FounderSection() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section className="w-full bg-[#fcfcfc] py-10 md:py-16">
+    <section id="our-founder" className="w-full bg-[#fcfcfc] py-10 md:py-16">
       <div className="mx-auto w-full max-w-[1072px] px-6 lg:px-8">
         {/* Founder Text & Main Image */}
         <div className="flex flex-col-reverse md:grid md:grid-cols-[1.05fr_1fr] md:gap-12 lg:gap-16 items-stretch">

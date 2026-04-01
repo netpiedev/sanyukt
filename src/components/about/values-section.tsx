@@ -20,7 +20,10 @@ const values = [
 
 export function ValuesSection() {
   return (
-    <section className="w-full bg-[#f8fbfd] py-16 md:py-24">
+    <section
+      id="vision-and-mission"
+      className="w-full bg-[#f8fbfd] py-16 md:py-24"
+    >
       <div className="mx-auto w-full max-w-[1240px] px-6 md:px-8">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
           {values.map((value, index) => (

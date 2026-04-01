@@ -15,7 +15,9 @@ export default function AboutPage() {
       <SiteHeader />
       <Hero />
       <FounderSection />
-      <WatchVideoSection />
+      <div id="our-people">
+        <WatchVideoSection />
+      </div>
       <ValuesSection />
       <WhatWeDoSection />
       <TimelineSection />
